@@ -4,7 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
-    "start": "http-server -c-1"
+    "start": "http-server -c-1 -o"
   },
   "repository": {
     "type": "git",

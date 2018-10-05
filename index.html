@@ -18,6 +18,8 @@
 
     <title>PROFILE</title>
 
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" href="css/main.css">
@@ -26,7 +28,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--MODULE-->
     <script src="js/module/module.js"></script>
@@ -40,13 +42,36 @@
 </head>
 
 <body>
+    <div  id="loader" class="sk-cube-overlay hidden">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
 
-    <nav></nav>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 center">
+                    <h1 class="margin-top-40">PRO<span>FILE</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <ng-view></ng-view>
 
     <footer>
+        <nav>
 
+        </nav>
     </footer>
     
 </body>

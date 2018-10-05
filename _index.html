@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consulta de LOL API</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- JQUERY -->
+    <script src="js/jquery.js"></script>
+
+    <!-- JQUERY MASK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <!-- JS & STYLES -->
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="overlay hidden">
+        <div id="loader">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>PRO<span>FILE</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <div class="row">
+                    
+                </div>
+
+            </div>
+        </div>
+        <div class="row hidden" id="txResultados">
+            <div class="col-md-6 mt-4 text-center">
+                <h2>SOLO / DUO</h2>
+                <h4 id="txEloSolo">Unranked</h4>
+                <h5 id="txPDLSolo">0 PDL</h5>
+                <img id="txImgSolo" src="images/base-icons/provisional.png" alt="Tier Icon" class="img-fluid">
+                <h4><span id="txVitoriasSolo" class="text-success">0</span>V / <span id="txDerrotasSolo" class="text-danger">0</span>D</h4>
+                <h5 class="text-primary">Taxa de vitória de <span id="txMediaSolo" class="">0</span>%</h5>
+            </div>
+            <div class="col-md-6 mt-4 text-center">
+                <h2>FLEX</h2>
+                <h4 id="txEloFlex">Unranked</h4>
+                <h5 id="txPDLFlex">0 PDL</h5>
+                <img id="txImgFlex" src="images/base-icons/provisional.png" alt="Tier Icon" class="img-fluid">
+                <h4><span id="txVitoriasFlex" class="text-success">0</span>V / <span id="txDerrotasFlex" class="text-danger">0</span>D</h4>
+                <h5 class="text-primary">Taxa de vitória de <span id="txMediaFlex" class="">0</span>%</h5>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>

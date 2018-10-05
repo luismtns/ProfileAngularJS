@@ -1,0 +1,49 @@
+﻿//-- GLOBAL
+//---- scaffolding (html, body)
+
+body{
+    // padding: 60px 0;
+    background-color: #21233c;
+    color: #E9E9E9;
+    @media(max-width: 768px){
+    }
+}
+
+.margin-size{
+    margin: 0 0 @space;
+
+    @media(max-width: 425px) {
+        margin: 0 0 @space-sm;
+    }
+}
+
+h1{
+    color: #5b27cc;
+    .margin-size;
+    @media(max-width: 425px) {
+    }
+    &>span{       
+        color: #00ff78;
+    }
+}
+h2{
+    .margin-size;
+    @media(max-width: 425px) {
+    }
+}
+
+h3{
+    @media(max-width: 425px) {
+    }
+    .margin-size;
+}
+
+h4{
+    .margin-size;
+    @media(max-width: 425px) {
+    }
+}
+
+p {
+    .margin-size;
+}
