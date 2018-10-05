@@ -1,0 +1,26 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luismtns/ProfileAngularJS.git"
+  },
+  "author": "Luís Otávio Martins Bovo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luismtns/ProfileAngularJS/issues"
+  },
+  "homepage": "https://github.com/luismtns/ProfileAngularJS#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0",
+    "less": "^3.8.1"
+  }
+}

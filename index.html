@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="meuApp">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+    />
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * 'unsafe-inline' gap: ws: https://ssl.gstatic.com; media-src *; img-src * data: content:;style-src * 'self' 'unsafe-inline' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>PROFILE</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+
+    <!--MODULE-->
+    <script src="js/module/module.js"></script>
+    <!--ROUTE-->
+    <script src="js/route/route.js"></script>
+    <!--CONTROLLER-->
+    <script src="js/controller/principal.js"></script>
+
+    <script src="bower_components/jquery-mask-plugin/src/jquery.mask.js"></script>
+
+</head>
+
+<body>
+
+    <nav></nav>
+
+    <ng-view></ng-view>
+
+    <footer>
+
+    </footer>
+    
+</body>
+
+</html>
