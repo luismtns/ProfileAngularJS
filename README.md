@@ -9,10 +9,13 @@ A ideia é não usar um servidor node e sim rodar em um servidor padrão, logo a
 ```
 npm install
 ```
+Para realizar as chamadas de serviços PHP é necessário utilizar outro método, utilizando um servidor Apache como XAMP ou similar.
+[XAMP] (https://www.apachefriends.org/pt_br/index.html) Apache + MariaDB + PHP + Perl Server
+[USBWebserver] (http://www.usbwebserver.net) Apache + MySQL Server Portátil
 
 ### Pré-requisitos
 
-Para desenvolve o requisito básico é o NodeJS + NPM (https://nodejs.org/en/), dependencias de desenvolvimento como grunt, less, http-server entre outros já estão nas dependencias do projeto, caso seja nessesário instale as dependencias de forma global.
+Para desenvolve o requisito básico é o NodeJS + NPM (https://nodejs.org/en/) e um Servidor APACHE, dependencias de desenvolvimento como grunt, less, http-server entre outros já estão nas dependencias do projeto, caso seja nessesário instale as dependencias de forma global.
 
 ## Construido com
 
