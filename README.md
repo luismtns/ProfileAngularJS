@@ -10,8 +10,8 @@ A ideia é não usar um servidor node e sim rodar em um servidor padrão, logo a
 npm install
 ```
 Para realizar as chamadas de serviços PHP é necessário utilizar outro método, utilizando um servidor Apache como XAMP ou similar.
-[XAMP] (https://www.apachefriends.org/pt_br/index.html) Apache + MariaDB + PHP + Perl Server
-[USBWebserver] (http://www.usbwebserver.net) Apache + MySQL Server Portátil
+* [XAMP] (https://www.apachefriends.org/pt_br/index.html) Apache + MariaDB + PHP + Perl Server
+* [USBWebserver] (http://www.usbwebserver.net) Apache + MySQL Server Portátil
 
 ### Pré-requisitos
 
