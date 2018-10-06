@@ -325,3 +325,11 @@ p {
     transform: scale3D(0, 0, 1);
   }
 }
+nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  font-size: 26px;
+}
