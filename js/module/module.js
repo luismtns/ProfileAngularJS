@@ -1,1 +1,1 @@
-var ngapp = angular.module("meuApp", ['ngRoute']);
+var ngapp = angular.module("ngProfile", ['ngRoute']);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="meuApp">
+<html lang="pt-br" ng-app="ngProfile">
 
 <head>
     <meta charset="utf-8"/>
@@ -38,6 +38,7 @@
     <!--CONTROLLER-->
     <script src="js/controller/principal.js"></script>
     <script src="js/controller/perfil.js"></script>
+    <script src="js/controller/login.js"></script>
 
     <script src="bower_components/jquery-mask-plugin/src/jquery.mask.js"></script>
 
@@ -70,27 +71,26 @@
 
     <ng-view></ng-view>
 
-    <footer>
-        <nav>
-            <div class="row center">
-                <div class="col-xs-2 col-xs-offset-1">
-                    <a href="#/"><i class="fas fa-home"></i></a>
-                </div>
-                <div class="col-xs-2">
-                    <a href="#/"><i class="fas fa-desktop"></i></a>
-                </div>
-                <div class="col-xs-2">
-                    <a href="#/"><i class="fas fa-video"></i></a>
-                </div>
-                <div class="col-xs-2">
-                    <a href="#/"><i class="far fa-newspaper"></i></a>
-                </div>
-                <div class="col-xs-2">
-                  <a href="#/perfil"><i class="fas fa-user"></i></a>
-                </div>
+    <nav>
+        <div class="row center">
+            <div class="col-xs-2 col-xs-offset-1">
+                <a href="#/"><i class="fas fa-home"></i></a>
             </div>
-        </nav>
-    </footer>
+            <div class="col-xs-2">
+                <a href="#/"><i class="fas fa-desktop"></i></a>
+            </div>
+            <div class="col-xs-2">
+                <a href="#/"><i class="fas fa-video"></i></a>
+            </div>
+            <div class="col-xs-2">
+                <a href="#/"><i class="far fa-newspaper"></i></a>
+            </div>
+            <div class="col-xs-2">
+                <a class="hidden" href="#/perfil"><i class="fas fa-user"></i></a>
+                <a href="#/login" data-is-active="active"><i class="fas fa-sign-in-alt"></i></a>
+            </div>
+        </div>
+    </nav>
     
 </body>
 

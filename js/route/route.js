@@ -8,6 +8,10 @@ ngapp.config(function ($routeProvider) {
         templateUrl: 'view/perfil.html',
         controller: 'perfilCTRL'
     })
+    .when('/login', {
+        templateUrl: 'view/login.html',
+        controller: 'loginCTRL'
+    })
     // .when('/path', {
     //     templateUrl: 'view/name.html',
     //     controller: 'nameCTRL'
