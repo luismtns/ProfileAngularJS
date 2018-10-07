@@ -1,5 +1,5 @@
 
-ngapp.controller("loginCTRL", function ($scope) {
+ngapp.controller("loginCTRL", function ($scope, $http) {
     
     $('#btnLogar').click(function () {
         showLoad();
@@ -18,13 +18,19 @@ ngapp.controller("loginCTRL", function ($scope) {
                 }
         })
         .done(function(data){
-            console.log(data);
+            if(data == 'erro'){
+                aviso('Erro ao realizar cadastro, tente novamente.');
+            }else{
+                userID = data;
+                window.location.href='#/perfil';
+            }
             hideLoad();
         })
         .fail(function(jqXHR, textStatus){
             console.log(jqXHR);
             hideLoad();
         });
+
         
     });
 });

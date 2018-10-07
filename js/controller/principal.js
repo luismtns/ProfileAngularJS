@@ -1,5 +1,6 @@
 ﻿var rankJson = {};
 
+var userID;
 
 
 function showLoad() {
