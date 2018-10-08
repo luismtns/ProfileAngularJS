@@ -37,6 +37,7 @@ ul {
 body {
   background-color: #21233C;
   color: #E9E9E9;
+  padding-bottom: 80px;
 }
 .margin-size {
   margin: 0 0 20px;
@@ -332,14 +333,16 @@ nav {
   bottom: 0;
   right: 0;
   left: 0;
-  height: 40px;
-  font-size: 20px;
-  line-height: 40px;
+  height: 60px;
+  font-size: 30px;
+  line-height: 60px;
 }
 nav a {
   color: #1CDD84;
 }
-nav a:hover {
+nav a:hover,
+nav a:active,
+nav a:focus {
   color: #1CDD84;
   filter: saturate(200%);
 }

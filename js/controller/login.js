@@ -19,7 +19,8 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
         })
         .done(function(data){
             if(data == 'erro'){
-                alert('Erro ao realizar cadastro! Usuário Já existente.');
+                alert('Erro ao realizar cadastro! Usuário já existente.');
+                return
             }else{
                 userID = data;
                 console.log(userID);
@@ -51,6 +52,7 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
         .done(function(data){
             if(data == 'erro'){
                 alert('Dados Incorretos.');
+                return
             }else{
                 userID = data;
                 console.log(userID);
