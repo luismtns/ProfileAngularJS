@@ -1,6 +1,6 @@
 ﻿var rankJson = {};
 
-var userID;
+var jsonUsuario;
 var userLogado = false;
 var userName = '';
 
@@ -26,7 +26,8 @@ function verificarLogin(){
 function verificarSessao() {
     
     if(localStorage.getItem('user') != null){
-        userID = localStorage.getItem('user');         
+        let txjsonUser = localStorage.getItem('user');   
+        jsonUsuario = JSON.parse(txjsonUser);
         userLogado = true;
         verificarLogin();
         window.location.href = '#/perfil'

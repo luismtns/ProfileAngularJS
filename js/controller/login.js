@@ -12,7 +12,7 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
         var reEmail = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
         var reSenha = new RegExp("(?!^[0-9]*$)(?!^[a-zA-Z!@#$%^&*()_+=<>?]*$)^([a-zA-Z!@#$%^&*()_+=<>?0-9]{8,})$");
 
-        console.log(reEmail.test(txEmail));
+        // console.log(reEmail.test(txEmail));
         if(txLogin.length < 3){
             alert("Verifique o campo do Login.");
             return
@@ -58,19 +58,25 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
             "url":  "php/include.php",
             "method": "POST", 
             "data":{
-                'nome': txLogin,
+                'login': txLogin,
                 'email': txEmail,
                 'senha': txSenha
             }
         })
         .done(function(data){
-            if(data == 'erro'){
-                alert('Erro ao realizar cadastro! Usuário já existente.');
-                return
+            if(JSON.parse(data)){
+                data = JSON.parse(data);
+                if(data.error != ''){
+                    alert(data['error']);
+                    console.log(data);
+                    return
+                }else{
+                    salvarSessao(data);
+                    console.log(data);
+                    window.location.href='#/perfil';
+                }
             }else{
-                salvarSessao(data);
-                console.log(userID);
-                window.location.href='#/perfil';
+                alert('Erro Interno.')
             }
             hideLoad();
         })
@@ -87,18 +93,24 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
             "url":  "php/autentica.php",
             "method": "POST", 
             "data":{
-                'nome': txLogin,
+                'login': txLogin,
                 'senha': txSenha
             }
         })
         .done(function(data){
-            if(data == 'erro'){
-                alert('Dados Incorretos.');
-                return
+            if(JSON.parse(data)){    
+                data = JSON.parse(data);            
+                if(data.error != ''){
+                    alert(data['error']);
+                    console.log(data);
+                    return
+                }else{
+                    salvarSessao(data);
+                    console.log(data['user']);
+                    window.location.href='#/perfil';
+                }
             }else{
-                salvarSessao(data);
-                console.log(userID);
-                window.location.href='#/perfil';
+                alert('Erro Interno.')
             }
             hideLoad();
         })
@@ -108,9 +120,9 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
         });
     }
 
-    function salvarSessao(id){
-            localStorage.setItem('user', JSON.stringify(id));
-            userID = id;            
+    function salvarSessao(userJson){
+            localStorage.setItem('user', JSON.stringify(userJson['user']));
+            jsonUsuario = userJson['user'];            
             userLogado = true;
     }
 

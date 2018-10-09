@@ -2,19 +2,88 @@
     include 'connect.php';
     
 
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-
-    $sql0 = "SELECT * FROM `usuario` WHERE NOME = '$nome' OR EMAIL = '$email' ";
-    $verifica = mysqli_query($conect, $sql0) or die("erro");
-
-    if (mysqli_num_rows($verifica)>0){
-        die("erro");
+    if(empty($_POST['login']) && strlen($_POST['login']) < 3){
+        $error[] = utf8_encode('Falta Login');
+    }else{
+        $login = $_POST['login'];
+        
+        if(empty($_POST['email'])){
+            $error[] = 'Falta E-mail';
+        }else{
+            if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+                $error[] = utf8_encode('E-mail Invalido');
+            }else{            
+                $email = $_POST['email'];
+            }
+        }
     }
 
-    $sql = "INSERT INTO usuario (NOME, EMAIL, SENHA) VALUES ('$nome', '$email', '$senha')";
-    mysqli_query($conect, $sql) or die('erro');
-    echo mysqli_insert_id($conect);
+    if(!empty($login) && !empty($email)){
+
+        $sql0 = "SELECT * FROM `usuario` WHERE NOME = '$login' OR EMAIL = '$email' ";
+        $verifica = mysqli_query($conect, $sql0) or die($bd_error);
+
+        if (mysqli_num_rows($verifica)>0){
+            $error[] = 'Usuario ou Email ja constam na Base de Dados.';
+        }
+    }
+
+    if(empty($error)){
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+        $sql = "INSERT INTO usuario (NOME, EMAIL, SENHA) VALUES ('$login', '$email', '$senha')";
+        mysqli_query($conect, $sql) or die($bd_error);
+        
+        $userinfo = array(
+            'login' => $login,
+            'email' => $email
+        );
+        $validation_error = '';
+    }else{
+        $validation_error = implode(", ", $error);
+        $userinfo = '';
+    }
+
+
+    $output = array(
+        'error'  => $validation_error,
+        'user' => $userinfo
+        );
+    
+    echo json_encode($output);
+
     mysqli_close($conect);
+
+
+// if(empty($form_data->password))
+// {
+//  $error[] = 'Password is Required';
+// }
+// else
+// {
+//  $data[':password'] = password_hash($form_data->password, PASSWORD_DEFAULT);
+// }
+
+// if(empty($error))
+// {
+//  $query = "
+//  INSERT INTO register (name, email, password) VALUES (:name, :email, :password)
+//  ";
+//  $statement = $connect->prepare($query);
+//  if($statement->execute($data))
+//  {
+//   $message = 'Registration Completed';
+//  }
+// }
+// else
+// {
+//  $validation_error = implode(", ", $error);
+// }
+
+// $output = array(
+//  'error'  => $validation_error,
+//  'message' => $message
+// );
+
+// echo json_encode($output);
+
 ?>
