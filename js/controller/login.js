@@ -122,7 +122,7 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
 
     function salvarSessao(userJson){
             localStorage.setItem('user', JSON.stringify(userJson['user']));
-            jsonUsuario = userJson['user'];            
+            jsonUsuario = userJson['user'];          
             userLogado = true;
     }
 
