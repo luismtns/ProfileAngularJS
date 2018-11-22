@@ -6,13 +6,35 @@
     right: 0;
     left: 0;
     height: 60px;
-    font-size: 30px;
-    line-height: 60px;
-    a{
-        color: @verde-1;
+    font-size: 10px;
+    &>.row{
+        height: 100%;
+        .col-xs-3{
+            height: 100%;
+        }
+    }
+    .d-link{
+        height: 100%;
+        width: 100%;
+        display: flex; 
+        justify-content: center; 
+        flex-direction: column;
+        a{
+            color: @azul-1;
+        }
+        .menu_icon{
+            width: 25px;                
+            fill: @azul-1
+        }
         &:hover, &:active, &:focus{
-            color: @verde-1;
-            filter: saturate(200%);
+            background-color: @azul-1;
+            a{
+                color: @roxo-1;
+                text-decoration: none;
+            }
+            .menu_icon{
+                fill: @roxo-1;
+            }
         }
     }
 }
