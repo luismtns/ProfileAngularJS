@@ -1,7 +1,7 @@
 {
   "name": "profile",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto Interdisciplinar do 4º semestre de Design Digital - Anhembi Morumbi.",
   "main": "Gruntfile.js",
   "scripts": {
     "start": "http-server -c-1 -o"

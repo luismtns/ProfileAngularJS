@@ -99,6 +99,10 @@ a:focus,
 a:active {
   text-decoration: none;
 }
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 .center {
   text-align: center;
 }
@@ -344,10 +348,13 @@ nav {
   height: 60px;
   font-size: 10px;
 }
-nav > .row {
+nav .container {
   height: 100%;
 }
-nav > .row .col-xs-3 {
+nav .container .row {
+  height: 100%;
+}
+nav .container .row .col-xs-3 {
   height: 100%;
 }
 nav .d-link {
@@ -379,4 +386,7 @@ nav .d-link:hover .menu_icon,
 nav .d-link:active .menu_icon,
 nav .d-link:focus .menu_icon {
   fill: #4E29A6;
+}
+#overlay-logo {
+  background-color: #39d3f7;
 }
