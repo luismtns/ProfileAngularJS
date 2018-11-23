@@ -1,5 +1,11 @@
 
-ngapp.controller("loginCTRL", function ($scope, $http) {
+ngapp.controller("loginCTRL", function ($scope, $http, $route) {
+    $scope.$route = $route;
+    $('.d-link').removeClass('active');
+    if($route.current.activetab == 'login'){
+        $('#perfilLogin').addClass('active');
+    }
+    
     verificarLogin();
 
     
@@ -125,6 +131,34 @@ ngapp.controller("loginCTRL", function ($scope, $http) {
             jsonUsuario = userJson['user'];          
             userLogado = true;
     }
+
+    $('#close-btn').click(function () {
+        window.history.back();
+    })
+
+
+    $('#btnEntrarTela').click(function () {
+        $('#mainLogin').addClass('hidden');
+        $('#telaLogin').removeClass('hidden');
+
+    })
+
+    $('#voltarMain1').click(function () {
+        $('#telaLogin').addClass('hidden');  
+        $('#mainLogin').removeClass('hidden');      
+    })
+    
+    $('#btnRegistrarTela').click(function () {
+        $('#mainLogin').addClass('hidden');
+        $('#telaRegistrar').removeClass('hidden');
+
+    })
+
+
+    $('#voltarMain2').click(function () {
+        $('#telaRegistrar').addClass('hidden');  
+        $('#mainLogin').removeClass('hidden');      
+    })
 
 });
 

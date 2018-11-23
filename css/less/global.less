@@ -40,6 +40,9 @@ h3{
 }
 
 h4{
+    font-size: 24px;
+    color: @white-1;
+    font-weight: normal;
     .margin-size;
     @media(max-width: 425px) {
     }
@@ -58,4 +61,84 @@ a{
 .container{
     padding-right: 20px;
     padding-left: 20px;
+}
+
+.btn-verde{
+    display: inline-block;
+    padding: 8px 0;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 2px solid @verde-1;
+    color: @verde-1;
+    border-radius:  20px;
+    background-color: transparent;
+    transition: color, background-color 0.3s;
+    i{
+        font-size: 18px;
+        position: absolute;
+        right: 20px;
+        top: 11px;
+    }
+    &:hover,&:focus{
+        color: @azul-2;
+        background-color: @verde-1;
+    }
+}
+
+.form-group{
+    margin-bottom: 30px;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    height: 33px;
+    padding: 6px 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: @white-1 !important;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    background-color: transparent;
+    &:focus {
+        border-color: @verde-1;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: @white-1 !important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: @white-1 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: @white-1 !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: @white-1 !important;
 }

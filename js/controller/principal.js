@@ -39,7 +39,12 @@ function verificarSessao() {
 
 
 
-ngapp.controller("principalCTRL", function ($scope) {
+ngapp.controller("principalCTRL", function ($scope, $route) {
+    $scope.$route = $route;
+    $('.d-link').removeClass('active');
+    if($route.current.activetab == 'home'){
+        $('#homeLink').addClass('active');
+    }
     verificarLogin();
     
 });
