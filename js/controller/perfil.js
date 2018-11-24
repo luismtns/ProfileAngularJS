@@ -25,6 +25,36 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
 
     $('#btnSair').click(function () {
         logout();
-    })
+    });
+
+    var valPosicao1 = 73;
+
+    var graphP1 = new ProgressBar.Circle('#graphPosicao1', {
+        color: '#39d3f7',
+        strokeWidth: 8,
+        trailWidth: 4,
+        trailColor: '#242642',
+        text: {
+            value: '<img src="images/svg-icons/mid_lane.svg" alt=""><br>' + valPosicao1 + '%'
+        }
+    });
+    graphP1.animate(valPosicao1 / 100.0, {
+        duration: 1000
+    });
+
+    var valPosicao2 = 30;
+
+    var graphP2 = new ProgressBar.Circle('#graphPosicao2', {
+        color: '#ee61f2',
+        strokeWidth: 8,
+        trailWidth: 4,
+        trailColor: '#242642',
+        text: {
+            value: '<img src="images/svg-icons/sup_lane.svg" alt=""><br>' + valPosicao2 + '%'
+        }
+    });
+    graphP2.animate(valPosicao2 / 100.0, {
+        duration: 1000
+    });
 
 });

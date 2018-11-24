@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Krub';
-  src: url('../fonts/Krub/Krub-Bold.eot');
-  src: url('../fonts/Krub/Krub-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Krub/Krub-Bold.woff2') format('woff2'), url('../fonts/Krub/Krub-Bold.woff') format('woff'), url('../fonts/Krub/Krub-Bold.ttf') format('truetype'), url('../fonts/Krub/Krub-Bold.svg#Krub-Bold') format('svg');
+  src: url('fonts/Krub/Krub-Bold.eot');
+  src: url('fonts/Krub/Krub-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Krub/Krub-Bold.woff2') format('woff2'), url('fonts/Krub/Krub-Bold.woff') format('woff'), url('fonts/Krub/Krub-Bold.ttf') format('truetype'), url('fonts/Krub/Krub-Bold.svg#Krub-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Krub';
-  src: url('../fonts/Krub/Krub-Medium.eot');
-  src: url('../fonts/Krub/Krub-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Krub/Krub-Medium.eot.woff2') format('woff2'), url('../fonts/Krub/Krub-Medium.eot.woff') format('woff'), url('../fonts/Krub/Krub-Medium.eot.ttf') format('truetype'), url('../fonts/Krub/Krub-Medium.eot.svg#Krub-Medium.eot') format('svg');
+  src: url('fonts/Krub/Krub-Medium.eot');
+  src: url('fonts/Krub/Krub-Medium?#iefix') format('embedded-opentype'), url('fonts/Krub/Krub-Medium.woff2') format('woff2'), url('fonts/Krub/Krub-Medium.woff') format('woff'), url('fonts/Krub/Krub-Medium.ttf') format('truetype'), url('fonts/Krub/Krub-Medium.svg#Krub-Medium.eot') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -693,4 +693,64 @@ nav .d-link.active .menu_icon {
   width: 25%;
   border-color: #8388C3;
   color: #8388C3;
+}
+.progressbar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  font-size: 16px;
+  color: #F4F4F4 !important;
+}
+.progressbar-text img {
+  max-width: 30px;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.lol-infos {
+  line-height: 1;
+}
+.lol-infos h2 {
+  margin-bottom: 3px;
+}
+.lol-infos h3 {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+.lol-infos .kdalp p {
+  color: #39d3f7;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.lol-infos .winLoses p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.lol-infos .winLoses p.v {
+  color: #00de81;
+}
+.lol-infos .winLoses p.d {
+  color: #ee61f2;
+}
+.stats-box img {
+  max-width: 50px;
+}
+.stats-box p {
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+.stats-box h2 {
+  margin: 0;
+  line-height: 1;
+}
+.stats-box h5 {
+  margin: 0;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: bold;
 }

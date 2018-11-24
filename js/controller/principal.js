@@ -40,6 +40,7 @@ function verificarSessao() {
 
 
 ngapp.controller("principalCTRL", function ($scope, $route) {
+    AOS.refresh();
     $scope.$route = $route;
     $('.d-link').removeClass('active');
     if($route.current.activetab == 'home'){
