@@ -7,6 +7,8 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
     }
 
     verificarLogin();
+    var linkHash = window.location.hash.split('?')[1];
+    
     if(userLogado == false){
         window.location.href = '#/login'
     }

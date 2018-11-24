@@ -8,6 +8,7 @@ body{
     padding-bottom: 80px;
     @media(max-width: 768px){
     }
+    font-family: @font-1;
 }
 
 .margin-size{
@@ -20,6 +21,7 @@ body{
 
 h1{
     color: @roxo-1;
+    font-family: @font-1;
     .margin-size;
     @media(max-width: 425px) {
     }
@@ -28,30 +30,46 @@ h1{
     }
 }
 h2{
+    font-size: 26px;
+    color: @white-1;
+    font-weight: bold;
+    font-family: @font-1;
     .margin-size;
     @media(max-width: 425px) {
     }
 }
 
 h3{
-    @media(max-width: 425px) {
-    }
-    .margin-size;
-}
-
-h4{
     font-size: 24px;
     color: @white-1;
     font-weight: normal;
+    font-family: @font-1;
     .margin-size;
     @media(max-width: 425px) {
     }
+}
+
+h4{
+    font-size: 20px;
+    color: @white-1;
+    font-weight: bold;
+    font-family: @font-1;
+    .margin-size;
+    @media(max-width: 425px) {
+    }
+}
+
+h5{
+    font-size: 18px;
+    font-family: @font-1;
 }
 
 p {
     .margin-size;
+    font-family: @font-1;
 }
 a{
+    font-family: @font-1;
     text-decoration: none;
     &:hover, &:focus, &:active{
         text-decoration: none;
@@ -63,7 +81,8 @@ a{
     padding-left: 20px;
 }
 
-.btn-verde{
+
+.btn-padrao{
     display: inline-block;
     padding: 8px 0;
     width: 100%;
@@ -81,11 +100,17 @@ a{
     -ms-user-select: none;
     user-select: none;
     background-image: none;
+    border-radius:  20px;
+    transition: color, background-color 0.3s;
+    -webkit-transition: color, background-color 0.3s;
+    -o-transition: color, background-color 0.3s;
+    -moz-transition: color, background-color 0.3s;
+}
+.btn-verde{
+    .btn-padrao;
     border: 2px solid @verde-1;
     color: @verde-1;
-    border-radius:  20px;
     background-color: transparent;
-    transition: color, background-color 0.3s;
     i{
         font-size: 18px;
         position: absolute;
@@ -95,6 +120,34 @@ a{
     &:hover,&:focus{
         color: @azul-2;
         background-color: @verde-1;
+    }
+    &.xs{
+        width: auto;
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: normal;
+        i{
+            position: relative;
+            top: auto;
+            right: auto;
+            font-size: 16px;
+        }
+    }
+}
+.btn-rosa{
+    .btn-padrao;
+    border: 2px solid @rosa-1;
+    color: @white-1;
+    background-color: @rosa-1;
+    i{
+        font-size: 18px;
+        position: absolute;
+        right: 20px;
+        top: 11px;
+    }
+    &:hover,&:focus{
+        color: @rosa-1;
+        background-color: transparent;
     }
 }
 
@@ -123,6 +176,16 @@ a{
         outline: 0;
         -webkit-box-shadow: none;
         box-shadow: none;
+    }
+
+    &.search{
+        background: transparent url('../images/svg-icons/search.svg') left no-repeat;
+        background-size: 16px 16px;
+        padding: 0px;
+        height: 22px;
+        margin-top: 10px;
+        padding-left: 21px;
+        text-align: center;
     }
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

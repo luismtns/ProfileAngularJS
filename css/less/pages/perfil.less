@@ -1,0 +1,92 @@
+.header-perfil{
+    display: block;
+    width: 100%;
+    background: transparent url('../images/gradient-bg-perfil.svg') no-repeat top center;
+    min-height: 75px;
+    background-size: 100% auto;
+    margin-bottom: 30px;
+
+    #nomeUsuario{
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        margin-bottom: 8px;
+        margin-top: 40px;
+        @media (max-width: 321px) {
+            margin-top: 30px;
+        }
+    }
+    .sobreUsuario{
+        width: 100%;
+        display: inline-block;
+        font-size: 13px;
+        margin-bottom: 0;
+        #txIdade{
+            float: left;
+        }
+        #txPais{
+            float: right;
+        }
+    }
+}
+.body-perfil{
+    .social-icons{
+        display: inline-block;
+        font-size: 30px;
+        vertical-align: middle;
+        line-height: 1;
+        float: right;
+        a{
+            margin-left: 5px;
+            &:first-child{
+                margin-left: 0;
+            }
+            color: initial;
+            &:hover{
+                color: initial;
+            }
+            i.fa-twitch{
+                color: #6441A4;
+            }
+            i.fa-twitter{
+                color: #08A0E9
+            }
+            i.fa-youtube{
+                color: #E62117
+            }
+            i.fa-discord{
+                color: #7289DA; 
+            }
+        }
+    }
+}
+
+#tabs-container{
+    .tabs-nav{
+        text-align: center;
+       &:after{
+            clear: both;
+            display: table;
+            content: " ";
+        }
+        [class*="tabs-"]{
+            float: left;
+            position: relative;
+            min-height: 1px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+        }
+        .tabs-1{
+            width: 50%;
+            border-color: @verde-1;
+            color: @verde-1;
+        }
+        .tabs-2,.tabs-3{
+            width: 25%;
+            border-color: @azul-3;
+            color: @azul-3;
+        }
+    }
+}

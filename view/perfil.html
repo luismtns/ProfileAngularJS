@@ -1,33 +1,87 @@
-<div class="container">
-    <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1>Seja Bem-vindo <span>{{nome}}</span></h1>
-                </div>
-                <div class="col-xs-12">
-                    <button id="btnSair" class="btn btn-danger">Sair</button>
-                </div>
-            </div>
 
+<div class="header-perfil">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <input type="text" class="form-control search" placeholder="Pesquisar" disabled>
+            </div>
         </div>
     </div>
-    <div class="row hidden" id="txResultados">
-        <div class="col-md-6 mt-4 text-center">
-            <h2>SOLO / DUO</h2>
-            <h4 id="txEloSolo">Unranked</h4>
-            <h5 id="txPDLSolo">0 PDL</h5>
-            <img id="txImgSolo" src="images/base-icons/provisional.png" alt="Tier Icon" class="img-fluid">
-            <h4><span id="txVitoriasSolo" class="text-success">0</span>V / <span id="txDerrotasSolo" class="text-danger">0</span>D</h4>
-            <h5 class="text-primary">Taxa de vitória de <span id="txMediaSolo" class="">0</span>%</h5>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <img src="images/svg-icons/perfil_padrao.svg" alt="">
+            </div>
+            <div class="col-xs-8">
+                   <h4 id="nomeUsuario">Nome Lorem Ipsum</h4>
+                   <p class="sobreUsuario"><span id="txIdade">20 anos</span> <span id="txPais">BR - SP</span></p>
+            </div>
         </div>
-        <div class="col-md-6 mt-4 text-center">
-            <h2>FLEX</h2>
-            <h4 id="txEloFlex">Unranked</h4>
-            <h5 id="txPDLFlex">0 PDL</h5>
-            <img id="txImgFlex" src="images/base-icons/provisional.png" alt="Tier Icon" class="img-fluid">
-            <h4><span id="txVitoriasFlex" class="text-success">0</span>V / <span id="txDerrotasFlex" class="text-danger">0</span>D</h4>
-            <h5 class="text-primary">Taxa de vitória de <span id="txMediaFlex" class="">0</span>%</h5>
+    </div>
+</div>
+<div class="container body-perfil">
+    <div class="row margin-bottom-40">
+        <div class="col-xs-12">
+            <button class="btn-verde xs">
+                    <i class="fas fa-cog"></i> Setup
+            </button>
+            <div class="social-icons">
+                <a id="linkTwitch" href="">
+                        <i class="fab fa-twitch"></i>
+                </a>
+                <a id="linkTwitter" href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a id="linkYoutube" href="">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a id="linkDiscord" href="">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
         </div>
+    </div>
+</div>
+<div id="tabs-container">
+    <div class="tabs-nav">
+        <div class="tabs-1">
+            League of Legends
+        </div>
+        <div class="tabs-2">
+            CS
+        </div>
+        <div class="tabs-3">
+            DOTA
+        </div>
+    </div>
+</div>
+<div class="container body-perfil">
+    <div class="row margin-top-40">
+        <div class="col-xs-12 center">
+            <h2>Principais Posições</h2>
+        </div>
+    </div>
+    <div class="row margin-top-30">
+        <div class="offset-md-3 col-md-6">
+            <button id="btnSair" class="btn-rosa">Sair <i class="material-icons">power_settings_new</i></button>
+        </div>
+    </div>
+</div>
+<div class="row hidden" id="txResultados">
+    <div class="col-md-6 mt-4 text-center">
+        <h2>SOLO / DUO</h2>
+        <h4 id="txEloSolo">Unranked</h4>
+        <h5 id="txPDLSolo">0 PDL</h5>
+        <img id="txImgSolo" src="images/base-icons/provisional.png" alt="Tier Icon" class="img-fluid">
+        <h4><span id="txVitoriasSolo" class="text-success">0</span>V / <span id="txDerrotasSolo" class="text-danger">0</span>D</h4>
+        <h5 class="text-primary">Taxa de vitória de <span id="txMediaSolo" class="">0</span>%</h5>
+    </div>
+    <div class="col-md-6 mt-4 text-center">
+        <h2>FLEX</h2>
+        <h4 id="txEloFlex">Unranked</h4>
+        <h5 id="txPDLFlex">0 PDL</h5>
+        <img id="txImgFlex" src="images/base-icons/provisional.png" alt="Tier Icon" class="img-fluid">
+        <h4><span id="txVitoriasFlex" class="text-success">0</span>V / <span id="txDerrotasFlex" class="text-danger">0</span>D</h4>
+        <h5 class="text-primary">Taxa de vitória de <span id="txMediaFlex" class="">0</span>%</h5>
     </div>
 </div>

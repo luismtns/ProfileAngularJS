@@ -1,21 +1,14 @@
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans/OpenSans-Bold.eot');
-  src: url('../fonts/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'), url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-family: 'Krub';
+  src: url('../fonts/Krub/Krub-Bold.eot');
+  src: url('../fonts/Krub/Krub-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Krub/Krub-Bold.woff2') format('woff2'), url('../fonts/Krub/Krub-Bold.woff') format('woff'), url('../fonts/Krub/Krub-Bold.ttf') format('truetype'), url('../fonts/Krub/Krub-Bold.svg#Krub-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans/OpenSans-Light.eot');
-  src: url('../fonts/OpenSans/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/OpenSans-Light.woff2') format('woff2'), url('../fonts/OpenSans/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans/OpenSans-Light.svg#OpenSans-Light') format('svg');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans/OpenSans-Regular.eot');
-  src: url('../fonts/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+  font-family: 'Krub';
+  src: url('../fonts/Krub/Krub-Medium.eot');
+  src: url('../fonts/Krub/Krub-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Krub/Krub-Medium.eot.woff2') format('woff2'), url('../fonts/Krub/Krub-Medium.eot.woff') format('woff'), url('../fonts/Krub/Krub-Medium.eot.ttf') format('truetype'), url('../fonts/Krub/Krub-Medium.eot.svg#Krub-Medium.eot') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,6 +31,7 @@ body {
   background-color: #2d3052;
   color: #E9E9E9;
   padding-bottom: 80px;
+  font-family: 'Krub', Sans-serif;
 }
 .margin-size {
   margin: 0 0 20px;
@@ -49,6 +43,7 @@ body {
 }
 h1 {
   color: #4E29A6;
+  font-family: 'Krub', Sans-serif;
   margin: 0 0 20px;
 }
 @media (max-width: 425px) {
@@ -60,6 +55,10 @@ h1 > span {
   color: #00de81;
 }
 h2 {
+  font-size: 26px;
+  color: #F4F4F4;
+  font-weight: bold;
+  font-family: 'Krub', Sans-serif;
   margin: 0 0 20px;
 }
 @media (max-width: 425px) {
@@ -68,6 +67,10 @@ h2 {
   }
 }
 h3 {
+  font-size: 24px;
+  color: #F4F4F4;
+  font-weight: normal;
+  font-family: 'Krub', Sans-serif;
   margin: 0 0 20px;
 }
 @media (max-width: 425px) {
@@ -76,9 +79,10 @@ h3 {
   }
 }
 h4 {
-  font-size: 24px;
+  font-size: 20px;
   color: #F4F4F4;
-  font-weight: normal;
+  font-weight: bold;
+  font-family: 'Krub', Sans-serif;
   margin: 0 0 20px;
 }
 @media (max-width: 425px) {
@@ -86,8 +90,13 @@ h4 {
     margin: 0 0 10px;
   }
 }
+h5 {
+  font-size: 18px;
+  font-family: 'Krub', Sans-serif;
+}
 p {
   margin: 0 0 20px;
+  font-family: 'Krub', Sans-serif;
 }
 @media (max-width: 425px) {
   p {
@@ -95,6 +104,7 @@ p {
   }
 }
 a {
+  font-family: 'Krub', Sans-serif;
   text-decoration: none;
 }
 a:hover,
@@ -105,6 +115,30 @@ a:active {
 .container {
   padding-right: 20px;
   padding-left: 20px;
+}
+.btn-padrao {
+  display: inline-block;
+  padding: 8px 0;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 20px;
+  transition: color, background-color 0.3s;
+  -webkit-transition: color, background-color 0.3s;
+  -o-transition: color, background-color 0.3s;
+  -moz-transition: color, background-color 0.3s;
 }
 .btn-verde {
   display: inline-block;
@@ -124,11 +158,14 @@ a:active {
   -ms-user-select: none;
   user-select: none;
   background-image: none;
+  border-radius: 20px;
+  transition: color, background-color 0.3s;
+  -webkit-transition: color, background-color 0.3s;
+  -o-transition: color, background-color 0.3s;
+  -moz-transition: color, background-color 0.3s;
   border: 2px solid #00de81;
   color: #00de81;
-  border-radius: 20px;
   background-color: transparent;
-  transition: color, background-color 0.3s;
 }
 .btn-verde i {
   font-size: 18px;
@@ -140,6 +177,56 @@ a:active {
 .btn-verde:focus {
   color: #2d3052;
   background-color: #00de81;
+}
+.btn-verde.xs {
+  width: auto;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.btn-verde.xs i {
+  position: relative;
+  top: auto;
+  right: auto;
+  font-size: 16px;
+}
+.btn-rosa {
+  display: inline-block;
+  padding: 8px 0;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 20px;
+  transition: color, background-color 0.3s;
+  -webkit-transition: color, background-color 0.3s;
+  -o-transition: color, background-color 0.3s;
+  -moz-transition: color, background-color 0.3s;
+  border: 2px solid #ee61f2;
+  color: #F4F4F4;
+  background-color: #ee61f2;
+}
+.btn-rosa i {
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  top: 11px;
+}
+.btn-rosa:hover,
+.btn-rosa:focus {
+  color: #ee61f2;
+  background-color: transparent;
 }
 .form-group {
   margin-bottom: 30px;
@@ -167,6 +254,15 @@ a:active {
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.form-control.search {
+  background: transparent url('../images/svg-icons/search.svg') left no-repeat;
+  background-size: 16px 16px;
+  padding: 0px;
+  height: 22px;
+  margin-top: 10px;
+  padding-left: 21px;
+  text-align: center;
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -494,17 +590,107 @@ nav .d-link.active .menu_icon {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+  width: 100%;
 }
 .login-modal .top_nav {
   margin-top: 20px;
   font-size: 16px;
   margin-bottom: 40px;
 }
-.login-modal .top_nav h4 {
+.login-modal .top_nav h3 {
   text-align: center;
   margin: 0;
 }
-.login-modal .top_nav h4 i {
+.login-modal .top_nav h3 i {
   font-size: 24px;
   float: left;
+}
+.header-perfil {
+  display: block;
+  width: 100%;
+  background: transparent url('../images/gradient-bg-perfil.svg') no-repeat top center;
+  min-height: 75px;
+  background-size: 100% auto;
+  margin-bottom: 30px;
+}
+.header-perfil #nomeUsuario {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+  margin-top: 40px;
+}
+@media (max-width: 321px) {
+  .header-perfil #nomeUsuario {
+    margin-top: 30px;
+  }
+}
+.header-perfil .sobreUsuario {
+  width: 100%;
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.header-perfil .sobreUsuario #txIdade {
+  float: left;
+}
+.header-perfil .sobreUsuario #txPais {
+  float: right;
+}
+.body-perfil .social-icons {
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 1;
+  float: right;
+}
+.body-perfil .social-icons a {
+  margin-left: 5px;
+  color: initial;
+}
+.body-perfil .social-icons a:first-child {
+  margin-left: 0;
+}
+.body-perfil .social-icons a:hover {
+  color: initial;
+}
+.body-perfil .social-icons a i.fa-twitch {
+  color: #6441A4;
+}
+.body-perfil .social-icons a i.fa-twitter {
+  color: #08A0E9;
+}
+.body-perfil .social-icons a i.fa-youtube {
+  color: #E62117;
+}
+.body-perfil .social-icons a i.fa-discord {
+  color: #7289DA;
+}
+#tabs-container .tabs-nav {
+  text-align: center;
+}
+#tabs-container .tabs-nav:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+#tabs-container .tabs-nav [class*="tabs-"] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid;
+}
+#tabs-container .tabs-nav .tabs-1 {
+  width: 50%;
+  border-color: #00de81;
+  color: #00de81;
+}
+#tabs-container .tabs-nav .tabs-2,
+#tabs-container .tabs-nav .tabs-3 {
+  width: 25%;
+  border-color: #8388C3;
+  color: #8388C3;
 }
