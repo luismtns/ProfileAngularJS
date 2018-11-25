@@ -30,7 +30,6 @@ function verificarSessao() {
         jsonUsuario = JSON.parse(txjsonUser);
         userLogado = true;
         verificarLogin();
-        window.location.href = '#/perfil'
     }else{
         return false
     }

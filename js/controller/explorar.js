@@ -4,5 +4,6 @@
     if($route.current.activetab == 'explorar'){
         $('#explorarLink').addClass('active');
     }
+    verificarLogin();
 
 });

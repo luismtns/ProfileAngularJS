@@ -4,5 +4,6 @@
     if($route.current.activetab == 'videos'){
         $('#videosLink').addClass('active');
     }
+    verificarLogin();
 
 });

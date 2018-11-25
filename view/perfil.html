@@ -2,7 +2,7 @@
 <div class="header-perfil">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-6 col-xs-offset-3">
+            <div ng-click="abrirPesquisar()" class="col-xs-6 col-xs-offset-3">
                 <input type="text" class="form-control search" placeholder="Pesquisar" disabled>
             </div>
         </div>
@@ -116,27 +116,76 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-6 center stats-box">
+        <div data-aos="fade-right"
+        data-aos-easing="ease-in"
+        data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_taxavitoria.svg" alt="">
             <p>Taxa de Vitória</p>
             <h2>43%</h2>
         </div>
-        <div class="col-xs-6 center stats-box">
-            <img src="/images/svg-icons/icon_partidasjogadas.svg" alt="">
+        <div data-aos="fade-left"
+        data-aos-easing="ease-in"
+        data-aos-duration="300" class="col-xs-6 center stats-box">
+            <img src="images/svg-icons/icon_partidasjogadas.svg" alt="">
             <p>Partidas Jogadas</p>
             <h2>654</h2>
         </div>
     </div>
     <div class="row margin-top-20">
-        <div class="col-xs-6 center stats-box">
+        <div data-aos="fade-right"
+        data-aos-easing="ease-in"
+        data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_ama.svg" alt="">
-            <p>AMA</p>
-            <h5>43%</h5>
+            <p>A.M.A</p>
+            <h5>1322 / 4503 / 6023</h5>
         </div>
-        <div class="col-xs-6 center stats-box">
+        <div data-aos="fade-left"
+        data-aos-easing="ease-in"
+        data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_taxaama.svg" alt="">
-            <p>Partidas Jogadas</p>
-            <h2>654</h2>
+            <p>Taxa A.M.A</p>
+            <h2>1.65</h2>
+        </div>
+    </div>
+    <div class="row margin-top-40">
+        <div class="col-xs-12 center">
+            <h2 class="margin-bottom-20">Highlights</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div data-aos="fade-left"
+            data-aos-easing="ease-in"
+            data-aos-duration="300" class="videos-carousel">
+                <div>
+                    <div class="video-container">
+                        <span><i class="fas fa-play"></i></span>
+                        <img src="images/jpg/demo_video.jpg" alt="">
+                    </div>
+                    <p>Lorem Título</p>
+                </div>
+                <div>
+                    <div class="video-container">
+                        <span><i class="fas fa-play"></i></span>
+                        <img src="images/jpg/demo_video.jpg" alt="">
+                    </div>
+                    <p>Lorem Título</p>
+                </div>
+                <div>
+                    <div class="video-container">
+                        <span><i class="fas fa-play"></i></span>
+                        <img src="images/jpg/demo_video.jpg" alt="">
+                    </div>
+                    <p>Lorem Título</p>
+                </div>
+                <div>
+                    <div class="video-container">
+                        <span><i class="fas fa-play"></i></span>
+                        <img src="images/jpg/demo_video.jpg" alt="">
+                    </div>
+                    <p>Lorem Título</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row margin-top-30">

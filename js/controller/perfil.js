@@ -57,4 +57,16 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
         duration: 1000
     });
 
+    $('.videos-carousel').slick({
+        infinite: false,
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+        arrows: false
+      });
+
+      $scope.abrirPesquisar = function () {
+          console.log('oi');
+          window.location.href = "#/pesquisar";
+      }
+
 });

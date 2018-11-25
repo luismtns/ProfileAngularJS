@@ -25,6 +25,11 @@ ngapp.config(function ($routeProvider) {
         controller: 'explorarCTRL',
         activetab: 'explorar'
     })
+    .when('/pesquisar', {
+        templateUrl: 'view/pesquisar.html',
+        controller: 'pesquisarCTRL',
+        activetab: 'pesquisar'
+    })
     // .when('/path', {
     //     templateUrl: 'view/name.html',
     //     controller: 'nameCTRL'
