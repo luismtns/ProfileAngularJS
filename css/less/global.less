@@ -8,7 +8,7 @@ html, body {
 body{
     // padding: 60px 0;
     background-color: @azul-2;
-    color: #E9E9E9;
+    color: @white-1;
     padding-bottom: 100px;
     @media(max-width: 768px){
     }
@@ -208,6 +208,7 @@ a{
     background-color: transparent;
     &:focus {
         border-color: @verde-1;
+        // border-color: transparent;
         outline: 0;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -240,3 +241,35 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-image: none !important;
     color: @white-1 !important;
 }
+
+.cb-blank{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 33px;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .button {
+        display: block;
+        width: 100%;
+        border: 2px solid @white-1;
+        height: 33px;
+        padding: 6px 10px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      input:checked ~ .button {
+        background-color: @white-1;
+        color: @azul-2;
+      }
+  }
