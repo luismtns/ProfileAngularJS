@@ -49,7 +49,7 @@
             </div>
         </div>
     
-        <ng-view ng-if="!showSpin"></ng-view>
+        <ng-view [onload="showSpin"]></ng-view>
     
         <nav>
             <div class="container">
