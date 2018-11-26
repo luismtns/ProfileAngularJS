@@ -126,3 +126,36 @@
 }
   
 
+// Animações
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@-o-keyframes @name { @arguments(); }
+	@-ms-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	-o-animation: @arguments;
+	-ms-animation: @arguments;
+	animation: @arguments;
+}
+
+.transition(@argumentos){
+  transition: @argumentos;
+  -webkit-transition: @argumentos;
+  -moz-transition: @argumentos;
+  -o-transition: @argumentos;
+  -ms-transition: @argumentos;
+  transition: @argumentos;
+}
+
+.background-zoom {
+    .transition(background-size 0.3s ease-in-out);
+  &:hover{
+    background-size: 105% auto !important;
+  }
+}

@@ -271,6 +271,11 @@ a:active {
   color: #F4F4F4;
   background-color: transparent;
 }
+.btn-branco.hover:hover,
+.btn-branco.hover:focus {
+  color: #2d3052;
+  background-color: #F4F4F4;
+}
 .btn-branco.xs {
   width: 100%;
   padding: 6px 15px;
@@ -622,6 +627,16 @@ select:-webkit-autofill {
   100% {
     background-position: 0% 10%;
   }
+}
+.background-zoom {
+  -webkit-transition: background-size 0.3s ease-in-out;
+  -moz-transition: background-size 0.3s ease-in-out;
+  -o-transition: background-size 0.3s ease-in-out;
+  -ms-transition: background-size 0.3s ease-in-out;
+  transition: background-size 0.3s ease-in-out;
+}
+.background-zoom:hover {
+  background-size: 105% auto !important;
 }
 nav {
   z-index: 999999;
@@ -1009,4 +1024,29 @@ nav .d-link.active .menu_icon {
 .body-pesquisar .perfil-box .divisao,
 .body-pesquisar .perfil-box .servidor {
   margin-bottom: 0;
+}
+.explorar_c {
+  height: 150px;
+  margin-top: 30px;
+  border-radius: 20px;
+  background-size: 100% auto !important;
+}
+@media (max-width: 321) {
+  .explorar_c {
+    height: 125px;
+  }
+}
+.explorar_c.participe {
+  background: url(../images/jpg/comunidade_bg.jpg) no-repeat center center;
+}
+.explorar_c.reviews {
+  background: url(../images/jpg/reviews_bg.jpg) no-repeat center center;
+}
+.explorar_c.noticias {
+  background: url(../images/jpg/noticias_bg.jpg) no-repeat center center;
+}
+@media (min-width: 500px) {
+  main {
+    display: none;
+  }
 }
