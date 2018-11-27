@@ -1045,6 +1045,98 @@ nav .d-link.active .menu_icon {
 .explorar_c.noticias {
   background: url(../images/jpg/noticias_bg.jpg) no-repeat center center;
 }
+.header-participe {
+  display: block;
+  width: 100%;
+  background: transparent url('../images/gradient-bg-participe.svg') no-repeat top center;
+  min-height: 75px;
+  background-size: 100% auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+.header-participe i {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 9999;
+}
+.body-participe .enquete-slick .slick-slide {
+  margin-right: 15px;
+}
+.body-participe .enquete-slick .slick-slide .enquete-box {
+  padding: 8px;
+  border: 2px solid #F4F4F4;
+  border-radius: 20px 20px 0 0;
+}
+.body-participe .enquete-slick .slick-slide .btn-voltar {
+  display: inline-block;
+  padding: 8px 0;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 20px;
+  transition: color, background-color 0.3s;
+  -webkit-transition: color, background-color 0.3s;
+  -o-transition: color, background-color 0.3s;
+  -moz-transition: color, background-color 0.3s;
+  border: 2px solid #39d3f7;
+  background-color: #39d3f7;
+  color: #2d3052;
+  padding: 2px 0;
+  border-radius: 0 0 20px 20px;
+}
+.body-participe .perguntas .btn-blank {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  padding: 0;
+  z-index: 10;
+}
+.header-noticias {
+  display: block;
+  width: 100%;
+  background: transparent url('../images/gradient-bg-noticias.svg') no-repeat top center;
+  min-height: 75px;
+  background-size: 100% auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+.header-noticias i {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 9999;
+}
+.header-reviews {
+  display: block;
+  width: 100%;
+  background: transparent url('../images/gradient-bg-reviews.svg') no-repeat top center;
+  min-height: 75px;
+  background-size: 100% auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+.header-reviews i {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 9999;
+}
 @media (min-width: 500px) {
   main {
     display: none;

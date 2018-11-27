@@ -25,6 +25,26 @@ ngapp.config(function ($routeProvider) {
         controller: 'explorarCTRL',
         activetab: 'explorar'
     })
+    .when('/explorar/noticias', {
+        templateUrl: 'view/explorar/noticias.html',
+        controller: 'noticiasCTRL',
+        activetab: 'explorar'
+    })
+    .when('/explorar/participe', {
+        templateUrl: 'view/explorar/participe.html',
+        controller: 'participeCTRL',
+        activetab: 'explorar'
+    })
+    .when('/explorar/reviews', {
+        templateUrl: 'view/explorar/reviews.html',
+        controller: 'reviewsCTRL',
+        activetab: 'explorar'
+    })
+    .when('/explorar', {
+        templateUrl: 'view/explorar.html',
+        controller: 'explorarCTRL',
+        activetab: 'explorar'
+    })
     .when('/pesquisar', {
         templateUrl: 'view/pesquisar.html',
         controller: 'pesquisarCTRL',
