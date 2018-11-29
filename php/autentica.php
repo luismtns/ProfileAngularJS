@@ -3,7 +3,7 @@
 
     $login = $_POST['login'];
     $senha = $_POST['senha'];
-    $sql = "SELECT * FROM usuario WHERE NOME = '$login' ";
+    $sql = "SELECT * FROM usuario WHERE USER = '$login' ";
     $verifica = mysqli_query($conect, $sql) or die("erro");
         if (mysqli_num_rows($verifica)<=0){
           $error[] = 'Usuario nao encontrado.';
@@ -12,7 +12,7 @@
             while($row = mysqli_fetch_array($verifica)){
                 if(password_verify($senha, $row['SENHA'])){
 
-                    $loginVerificado = $row['NOME'];
+                    $loginVerificado = $row['USER'];
                     $emailVerificado = $row['EMAIL'];
 
                 }else{

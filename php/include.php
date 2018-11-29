@@ -20,7 +20,7 @@
 
     if(!empty($login) && !empty($email)){
 
-        $sql0 = "SELECT * FROM `usuario` WHERE NOME = '$login' OR EMAIL = '$email' ";
+        $sql0 = "SELECT * FROM `usuario` WHERE USER = '$login' OR EMAIL = '$email' ";
         $verifica = mysqli_query($conect, $sql0) or die($bd_error);
 
         if (mysqli_num_rows($verifica)>0){
@@ -30,7 +30,7 @@
 
     if(empty($error)){
         $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-        $sql = "INSERT INTO usuario (NOME, EMAIL, SENHA) VALUES ('$login', '$email', '$senha')";
+        $sql = "INSERT INTO usuario (USER, EMAIL, SENHA) VALUES ('$login', '$email', '$senha')";
         mysqli_query($conect, $sql) or die($bd_error);
         
         $userinfo = array(

@@ -70,7 +70,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
             }
         })
         .done(function(data){
-            if(JSON.parse(data)){
+            try{
                 data = JSON.parse(data);
                 if(data.error != ''){
                     alert(data['error']);
@@ -81,8 +81,9 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
                     console.log(data);
                     window.location.href='#/perfil';
                 }
-            }else{
-                alert('Erro Interno.')
+            }catch{
+                alert('Erro Interno.');
+                console.log(data);
             }
             hideLoad();
         })
@@ -104,7 +105,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
             }
         })
         .done(function(data){
-            if(JSON.parse(data)){    
+            try{    
                 data = JSON.parse(data);            
                 if(data.error != ''){
                     alert(data['error']);
@@ -115,8 +116,9 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
                     console.log(data['user']);
                     window.location.href='#/perfil';
                 }
-            }else{
-                alert('Erro Interno.')
+            }catch{
+                alert('Erro Interno.');
+                console.log(data);
             }
             hideLoad();
         })
