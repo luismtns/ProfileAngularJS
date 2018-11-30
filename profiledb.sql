@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28-Nov-2018 às 04:04
+-- Generation Time: 30-Nov-2018 às 01:35
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -45,16 +45,24 @@ CREATE TABLE `usuario` (
   `TWITTER` varchar(255) NOT NULL,
   `TWITCH` varchar(255) NOT NULL,
   `DISCORD` varchar(255) NOT NULL,
-  `YOUTUBE` varchar(255) NOT NULL
+  `YOUTUBE` varchar(255) NOT NULL,
+  `CPU` varchar(255) NOT NULL,
+  `HD` varchar(255) NOT NULL,
+  `RAM` varchar(255) NOT NULL,
+  `GPU` varchar(255) NOT NULL,
+  `PLACAMAE` varchar(255) NOT NULL,
+  `MOUSE` varchar(255) NOT NULL,
+  `TECLADO` varchar(255) NOT NULL,
+  `FONE` varchar(255) NOT NULL,
+  `MONITOR` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`ID_USUARIO`, `USER`, `EMAIL`, `SENHA`, `NOME`, `SOBRENOME`, `NICK`, `IDADE`, `PAIS`, `CIDADE`, `IDIOMA1`, `IDIOMA2`, `USER_LOL`, `TWITTER`, `TWITCH`, `DISCORD`, `YOUTUBE`) VALUES
-(3, '$login', '$email', '$senha', '', '', '', 0, '', '', '', '', '', '', '', '', ''),
-(4, '$login', '$email', '$senha', '', '', '', 0, '', '', '', '', '', '', '', '', '');
+INSERT INTO `usuario` (`ID_USUARIO`, `USER`, `EMAIL`, `SENHA`, `NOME`, `SOBRENOME`, `NICK`, `IDADE`, `PAIS`, `CIDADE`, `IDIOMA1`, `IDIOMA2`, `USER_LOL`, `TWITTER`, `TWITCH`, `DISCORD`, `YOUTUBE`, `CPU`, `HD`, `RAM`, `GPU`, `PLACAMAE`, `MOUSE`, `TECLADO`, `FONE`, `MONITOR`) VALUES
+(5, 'luismtns', 'dark.luismtns@gmail.com', '$2y$10$aChsQ6Lb3Ymeqn1x5BN9Ue9Jik.arwtNdEhiysYxrAXnGm4l6ufva', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -74,7 +82,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID_USUARIO` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_USUARIO` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

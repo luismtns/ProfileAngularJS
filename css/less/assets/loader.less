@@ -162,13 +162,38 @@
 
 // MODAL
 #modalProfile{
-  .h_m{
-
-  }
-  .b_m{
-
-  }
-  .f_m{
-    
+  z-index: 99999999999999999999;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  .m_content{
+    width: 100%;
+    max-width: 90%;
+    min-height: 1px;
+    position: relative;
+    top: 40px;
+    right: auto;
+    left: auto;
+    margin: 0 auto;
+    background-color: @azul-2;
+    padding: 15px;
+    border-radius: 15px;
+    #h_m{
+      text-align: center;
+    }
+    #b_m{
+  
+    }
+    #f_m{
+      button{
+        margin-top: 20px;
+      }
+    }
   }
 }

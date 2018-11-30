@@ -638,6 +638,37 @@ select:-webkit-autofill {
 .background-zoom:hover {
   background-size: 105% auto !important;
 }
+#modalProfile {
+  z-index: 99999999999999999999;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+#modalProfile .m_content {
+  width: 100%;
+  max-width: 90%;
+  min-height: 1px;
+  position: relative;
+  top: 40px;
+  right: auto;
+  left: auto;
+  margin: 0 auto;
+  background-color: #2d3052;
+  padding: 15px;
+  border-radius: 15px;
+}
+#modalProfile .m_content #h_m {
+  text-align: center;
+}
+#modalProfile .m_content #f_m button {
+  margin-top: 20px;
+}
 nav {
   z-index: 999999;
   background-color: #4E29A6;
@@ -668,6 +699,9 @@ nav .d-link {
 nav .d-link a {
   color: #39d3f7;
 }
+nav .d-link a .img_on {
+  display: none;
+}
 nav .d-link .menu_icon {
   width: 25px;
   fill: #39d3f7;
@@ -675,9 +709,15 @@ nav .d-link .menu_icon {
 nav .d-link.active {
   background-color: #39d3f7;
 }
+nav .d-link.active .img_on {
+  display: inline-block;
+}
 nav .d-link.active a {
   color: #4E29A6;
   text-decoration: none;
+}
+nav .d-link.active .img_off {
+  display: none;
 }
 nav .d-link.active .menu_icon {
   fill: #4E29A6;
@@ -1061,6 +1101,10 @@ nav .d-link.active .menu_icon {
   left: 20px;
   z-index: 9999;
 }
+.body-participe .enquete-slick {
+  padding: 0;
+  width: 100%;
+}
 .body-participe .enquete-slick .slick-slide {
   margin-right: 15px;
 }
@@ -1120,6 +1164,10 @@ nav .d-link.active .menu_icon {
   top: 0;
   left: 20px;
   z-index: 9999;
+}
+.body-noticias .noticia_container {
+  height: 150px;
+  background: #8388C3;
 }
 .header-reviews {
   display: block;

@@ -2,7 +2,7 @@
  
  $region = "br1"; //https://developer.riotgames.com/regional-endpoints.html
  $summonerName = $_POST['SummonerName'];
- $apiKey = "RGAPI-1380a797-49fb-4eb6-9a2b-5eee2833ec94";
+ $apiKey = "RGAPI-67416e2d-b51c-489f-b28c-8453eb574138";
 
  // PART I. OBTAIN SUMMONERID
  

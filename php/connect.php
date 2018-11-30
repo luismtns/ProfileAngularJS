@@ -5,8 +5,11 @@
     header("Content-Type: text/html; charset=ISO-8859-1",true);
 
     //conexão com o servidor
-    $conect = mysqli_connect("localhost", "root", "","profiledb");
-    // $mysqli = new mysqli('localhost','root','','profiledb');
+    // LOCAL
+    // $conect = mysqli_connect("localhost", "root", "","profiledb");
+    
+    // HOST
+    $conect = mysqli_connect("localhost", "u230645325_pol", "oYbG4YGvSaIR","u230645325_pol");
 
     $bd_error = json_encode(array("error"=>"Falha ao conectar ao banco de dados."));
     

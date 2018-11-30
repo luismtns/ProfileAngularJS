@@ -25,6 +25,9 @@
         flex-direction: column;
         a{
             color: @azul-1;
+            .img_on{
+                display: none;
+            }
         }
         .menu_icon{
             width: 25px;                
@@ -32,9 +35,15 @@
         }
         &.active{
             background-color: @azul-1;
+            .img_on{
+                display: inline-block;
+            }
             a{
                 color: @roxo-1;
                 text-decoration: none;
+            }
+            .img_off{
+                display: none;
             }
             .menu_icon{
                 fill: @roxo-1;

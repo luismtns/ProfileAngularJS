@@ -164,28 +164,3 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
 
 });
 
-
-
-            // //...
-            // // function to get the user, if this.currentUser is not set,
-            // // try to load from the local storage
-            // function getUser() {
-            //     if (this.currentUser) {
-            //         return this.currentUser;
-            //     }
-            //     var storageUser = $window.localStorage.getItem('user');
-            //     if (storageUser) {
-            //         try {
-            //         this.user = JSON.parse(storageUser);
-            //         } catch (e) {
-            //         $window.localStorage.removeItem('user');
-            //         }
-            //     }
-            //     return this.currentUser;
-            //     };
-    
-            //     // you may also want to remove the user data from storage when he logs out
-            //     function logout() {
-            //         $window.localStorage.removeItem('user');
-            //         this.currentUser = null;
-            //     };
