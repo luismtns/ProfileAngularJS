@@ -9,7 +9,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
     verificarLogin();
 
     
-    $('#btnRegistrar').click(function () {
+    $scope.btnRegistrar = function () {
         showLoad();
         var txLogin = $('#txLoginC').val();
         var txEmail = $('#txEmailC').val();
@@ -44,9 +44,9 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
         }
 
         
-    });
+    }
     
-    $('#btnLogar').click(function () {
+    $scope.btnLogar = function () {
         showLoad();
         var txLogin = $('#txLogin').val();
         var txSenha = $('#txSenha').val(); 
@@ -54,7 +54,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
 
         logarUsuario(txLogin, txSenha);
         
-    });
+    }
 
     
     function registrarUsuario(txLogin, txEmail, txSenha){
@@ -81,7 +81,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
                     console.log(data);
                     window.location.href='#/perfil';
                 }
-            }catch{
+            }catch(err){
                 alert('Erro Interno.');
                 console.log(data);
             }
@@ -116,7 +116,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route) {
                     console.log(data['user']);
                     window.location.href='#/perfil';
                 }
-            }catch{
+            }catch(err){
                 alert('Erro Interno.');
                 console.log(data);
             }
