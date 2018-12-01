@@ -18,6 +18,6 @@ ngapp.controller('mainCTRL', function($rootScope,$scope, $timeout) {
           $rootScope.showSpin = false;
           $scope.showSpin = false;
           $("html, body").animate({scrollTop: 0}, "slow");
-        }, 50);
+        }, 300);
     });
 })
