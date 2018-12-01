@@ -5,6 +5,11 @@ ngapp.config(function ($routeProvider) {
         controller: 'principalCTRL',
         activetab: 'home'
     })
+    .when('/ladding', {
+        templateUrl: 'view/ladding.html',
+        controller: 'laddingCTRL',
+        activetab: 'ladding'
+    })
     .when('/perfil', {
         templateUrl: 'view/perfil.html',
         controller: 'perfilCTRL',
