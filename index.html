@@ -53,6 +53,26 @@
             <div id="f_m"><button onclick="fechar_aviso()" class="btn-rosa">Fechar</button></div>
         </div>
     </div>
+    <div class="hidden" id="desktopAcess">
+        <div class="container">
+            <div class="row margin-top-30">
+                <div class="col-xs-12 center padding-top-30">
+                    <h2 class="center">Aplicação disponível apenas para dispositivos mobile.</h2>
+                    <h3 class="center">Acesse pelo celular usando o mesmo link ou o QRCode abaixo.</h3>
+                    <div class="row">
+                        <div class="col-xs-2 col-xs-offset-5">
+                            <img src="images/jpg/qrcode.jpeg" alt="QRCode">
+                        </div>
+                    </div>
+                    <div class="row margin-top-40">
+                        <div class="col-xs-12">
+                            <img src="images/logo_full.svg" alt="Logo Profile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <main ng-controller="mainCTRL">
         <div ng-if="showSpin" id="loader" class="sk-cube-overlay pf-grad-overlay">
             <!-- <div class="sk-cube-grid">
@@ -74,9 +94,9 @@
         <ng-view [onload="showSpin"]></ng-view>
     
         <nav>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row center">
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 no-padding">
                         <div id="homeLink" class="d-link">
                             <a href="#/">
                                 <img class="img_off" src="images/png/profile_off.png" alt="Profile Logo">
@@ -85,7 +105,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 no-padding">
                         <div id="videosLink" class="d-link">
                             <a href="#/videos">
                                 <svg version="1.1" width="25.4" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.4 25" style="enable-background:new 0 0 25.4 25;" xml:space="preserve">
@@ -96,7 +116,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 no-padding">
                         <div id="explorarLink" class="d-link">
                             <a href="#/explorar">
                             <svg version="1.1" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -110,7 +130,7 @@
                             </a>                    
                         </div>
                     </div>
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 no-padding">
                         <div id="perfilLogin" class="d-link">
         
                             <a id="btnPerfil" href="#/perfil" class="hidden">
@@ -144,6 +164,7 @@
         </nav>
 
     </main>
+
     <!-- JS -->
     
     <script src="bower_components/angular/angular.min.js"></script>

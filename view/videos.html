@@ -1,11 +1,206 @@
-﻿<div class="header-videos">
-    
+﻿<div data-aos="fade-down"
+data-aos-easing="ease-in"
+data-aos-duration="300" class="header-videos">
+    <div class="video-box">
+        <div id="play-alert">
+            <i class="fas fa-play"></i>
+        </div>
+        <div id="pause-alert">
+            <i class="fas fa-pause"></i>
+        </div>
+            <video id="video_player">
+                <source src="videos/sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="cvideoprogress">
+                <div ng-style="progressVideo" id="video-progress"><span></span></div>
+            </div>
+    </div>
+    <div id="menu-video">
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div id="volume-control" class="col-xs-3">
+                    <i class="material-icons">
+                        volume_up
+                    </i>       
+                </div>
+                <div id="haha-rate" class="col-xs-3">
+                    <i class="fas fa-grin-squint-tears"></i>
+                </div>
+                <div id="fire-rate" class="col-xs-3">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div id="minimize-video" class="col-xs-3">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="body-videos">
+    <div id="tabs-container">
+        <div class="tabs-nav">
+            <div class="tabs-1">
+                League of Legends
+            </div>
+            <div class="tabs-2">
+                CS
+            </div>
+            <div class="tabs-3">
+                DOTA
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid no-padding-right">
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 center">
-            <h2>Vídeos</h2>
+        <!-- PESQUISAR -->
+        <div class="row margin-top-10">
+            <div class="col-xs-10 pesquisar">
+                <input type="text" id="" placeholder="Pesquisar" class="form-control">
+                <button class="btn-blank">
+                        <i class="material-icons">search</i>
+                </button>
+            </div>
+        </div>
+        <div data-aos="fade-left"
+        data-aos-easing="ease-in"
+        data-aos-duration="300" class="video-demo-slick">            
+            <div>
+                <img src="images/jpg/demo_reviews.jpg" alt="">
+                <p>Titulo Titulo Titulo Titulo Titulo</p>
+            </div>
+            <div>
+                <img src="images/jpg/demo_reviews.jpg" alt="">
+                <p>Titulo Titulo Titulo Titulo Titulo</p>
+            </div>
+            <div>
+                <img src="images/jpg/demo_reviews.jpg" alt="">
+                <p>Titulo Titulo Titulo Titulo Titulo</p>
+            </div>
+            <div>
+                <img src="images/jpg/demo_reviews.jpg" alt="">
+                <p>Titulo Titulo Titulo Titulo Titulo</p>
+            </div>
+            <div>
+                <img src="images/jpg/demo_reviews.jpg" alt="">
+                <p>Titulo Titulo Titulo Titulo Titulo</p>
+            </div>
+            <div>
+                <img src="images/jpg/demo_reviews.jpg" alt="">
+                <p>Titulo Titulo Titulo Titulo Titulo</p>
+            </div>
+        </div>
+
+        <!-- haha semana -->
+        <div class="row margin-top-30">
+            <div class="col-xs-12">
+                <h3>
+                    <i class="fas fa-grin-squint-tears"></i> da semana
+                </h3>
+                <div data-aos="fade-left"
+                data-aos-easing="ease-in"
+                data-aos-duration="300" class="video-demo-slick">            
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- fire semana -->
+        <div class="row margin-top-30">
+            <div class="col-xs-12">
+                <h3>
+                    <i class="fas fa-fire"></i> da semana
+                </h3>
+                <div data-aos="fade-left"
+                data-aos-easing="ease-in"
+                data-aos-duration="300" class="video-demo-slick">            
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- fire semana -->
+        <div class="row margin-top-30">
+            <div class="col-xs-12">
+                <h3>
+                    Em alta da semana
+                </h3>
+                <div data-aos="fade-left"
+                data-aos-easing="ease-in"
+                data-aos-duration="300" class="video-demo-slick">            
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                    <div>
+                        <img src="images/jpg/demo_reviews.jpg" alt="">
+                        <p>Titulo Titulo Titulo Titulo Titulo</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

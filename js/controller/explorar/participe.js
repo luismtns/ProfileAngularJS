@@ -14,7 +14,7 @@ ngapp.controller("participeCTRL", function ($scope, $route) {
         infinite: false,
         slidesToShow: 2.5,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
       });
 
 });

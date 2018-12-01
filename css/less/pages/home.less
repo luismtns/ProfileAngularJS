@@ -7,8 +7,8 @@
     left: 0;
     height: 60px;
     font-size: 10px;
-    box-shadow: 0px -5px 30px rgba(0,0,0, 0.25);
-    .container{
+    .box-shadow(0px -5px 30px rgba(0,0,0, 0.25));
+    .container-fluid{
         height: 100%;
         .row{
         height: 100%;
@@ -55,4 +55,102 @@
 
 #overlay-logo{
     background-color: @azul-1;
+}
+
+.body-home{
+    .carrousel-home{
+        margin-bottom: 25px;
+        .slick-slide{
+            margin-right: 20px;
+            margin-left: 20px;
+            img{
+                width: 100%;
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: -25px;
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+            li{
+                position: relative;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+                padding: 0;
+                cursor: pointer;
+                button{
+                    font-size: 0;
+                    line-height: 0;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    padding: 5px;
+                    cursor: pointer;
+                    color: transparent;
+                    border: 0;
+                    outline: none;
+                    background-color: @azul-4;
+                    border-radius: 50%;
+                }
+                &.slick-active{
+                    button{
+                        background-color: @azul-3;
+                    }
+                }
+            }
+        }
+    }
+    h3{
+        span{
+            color: @rosa-1;
+            font-weight: bold;
+        }
+    }
+    .carrousel-webserie{
+        
+        .slick-slide{
+            margin-right: 15px;
+            img{
+                width: 100%;
+            }
+            p{
+                text-align: center;
+                font-size: 13px;
+                margin: 10px 0 0;
+            }
+        }
+    }
+    .box-icones{
+        text-align: center;
+        img{
+            max-width: 200px;
+            width: 100%;
+            display: block;
+            margin: 30px auto 20px
+        }
+        p{
+            font-size: 16px;
+        }
+        &.azul{
+            h4{
+                color: @azul-1;
+            }
+        }
+        &.verde{
+            h4{
+                color: @verde-1;
+            }
+        }
+        &.rosa{
+            h4{
+                color: @rosa-1;
+            }
+        }
+    }
 }

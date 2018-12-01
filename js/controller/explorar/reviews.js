@@ -9,5 +9,10 @@ ngapp.controller("reviewsCTRL", function ($scope, $route) {
     $scope.btnVoltar = function () {
         window.location.href = "#/explorar"
     }
-
+    $('.carrousel-reviews').slick({
+        infinite: false,
+        slidesToShow: 2.5,
+        slidesToScroll: 1,
+        arrows: false
+      });
 });

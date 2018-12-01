@@ -46,5 +46,22 @@ ngapp.controller("principalCTRL", function ($scope, $route) {
         $('#homeLink').addClass('active');
     }
     verificarLogin();
+
+    $('.carrousel-home').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    $('.carrousel-webserie').slick({
+        infinite: false,
+        slidesToShow: 2.5,
+        slidesToScroll: 1,
+        arrows: false
+    });
     
 });
