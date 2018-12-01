@@ -22,12 +22,26 @@
 @import 'less/pages/videos.less';
 @import 'less/pages/pesquisar.less';
 @import 'less/pages/explorar.less';
-
-@media(min-width: 600px){
+@import 'less/pages/ladding.less';
+.disableSite{
     main{
         display: none;
     }
     #desktopAcess{
         display: block !important;
     }
+}
+.enableSite{
+    main{
+        display: block;
+    }
+    #desktopAcess{
+        display: none !important;
+    }
+}
+@media(min-width: 600px){
+    .disableSite;
+}
+@media(orientation: landscape){
+    .disableSite;
 }

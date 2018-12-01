@@ -312,6 +312,54 @@ a:active {
   background-color: transparent;
   font-weight: normal;
 }
+.btn-gradient {
+  display: inline-block;
+  padding: 8px 0;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 20px;
+  transition: color, background-color 0.3s;
+  -webkit-transition: color, background-color 0.3s;
+  -o-transition: color, background-color 0.3s;
+  -moz-transition: color, background-color 0.3s;
+  border: none;
+  color: #2d3052;
+  background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+  -webkit-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+  -moz-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+  -o-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+  -ms-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+.btn-gradient:hover,
+.btn-gradient:focus {
+  color: #39d3f7;
+  background: transparent !important;
+  border: 2px solid #39d3f7;
+  padding: 6px 0;
+  box-shadow: none;
+  -ms-box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+}
 .form-group {
   margin-bottom: 30px;
 }
@@ -1128,7 +1176,7 @@ nav .d-link.active .menu_icon {
   display: block;
   width: 100%;
   background-color: #242642;
-  padding: 10px 0;
+  padding: 15px 0 5px;
   text-align: center;
 }
 .header-videos #menu-video i {
@@ -1505,7 +1553,143 @@ nav .d-link.active .menu_icon {
   padding: 5px 15px 0;
   margin: 0;
 }
+@-webkit-keyframes bgAlternate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% -90%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-moz-keyframes bgAlternate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% -90%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-o-keyframes bgAlternate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% -90%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes bgAlternate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% -90%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.body-ladding {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999999999999;
+  background-color: #2d3052;
+  overflow-y: scroll;
+  overflow: auto;
+}
+.body-ladding .banner-topo {
+  background: #2d3052 url('../images/jpg/lp/banner_topo.jpg') top center no-repeat;
+  background-size: 100% auto;
+  min-height: 80vh;
+  padding-top: 70%;
+  animation-name: bgAlternate;
+  animation-duration: 5s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.body-ladding .saiba-mais {
+  line-height: 1;
+  text-align: center;
+}
+.body-ladding .saiba-mais p {
+  margin: 0;
+}
+.body-ladding .c-infografico p {
+  font-size: 18px;
+  color: #b9bdf9;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.body-ladding .c-infografico .img-1 {
+  display: block;
+  width: 100%;
+}
+.body-ladding .c-infografico .img-1 img {
+  display: block;
+  width: 100%;
+}
+.body-ladding .c-infografico .img-2 {
+  display: block;
+  width: 100%;
+  margin-bottom: -10px;
+}
+.body-ladding .c-infografico .img-2 img {
+  display: block;
+  width: 100%;
+}
+.body-ladding .c-infografico .img-3 {
+  display: block;
+  width: 100%;
+  margin-bottom: -20px;
+}
+.body-ladding .c-infografico .img-3 img {
+  display: block;
+  width: 100%;
+}
+.body-ladding .c-infografico .img-4 {
+  display: block;
+  width: 100%;
+  margin-bottom: -20px;
+}
+.body-ladding .c-infografico .img-4 img {
+  display: block;
+  width: 100%;
+}
+.disableSite main {
+  display: none;
+}
+.disableSite #desktopAcess {
+  display: block !important;
+}
+.enableSite main {
+  display: block;
+}
+.enableSite #desktopAcess {
+  display: none !important;
+}
 @media (min-width: 600px) {
+  main {
+    display: none;
+  }
+  #desktopAcess {
+    display: block !important;
+  }
+}
+@media (orientation: landscape) {
   main {
     display: none;
   }

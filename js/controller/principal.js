@@ -37,6 +37,15 @@ function verificarSessao() {
 }
 
 
+function primeiraVisita(){
+    if(localStorage.getItem('profile') != null){
+        return true
+    }else{
+        window.location.href = '#/ladding'
+    }
+}
+window.addEventListener('load', primeiraVisita, false);
+
 
 ngapp.controller("principalCTRL", function ($scope, $route) {
     AOS.refresh();

@@ -13,12 +13,12 @@
 
     $('#minimize-video').click(()=>{
         if($('.header-videos').hasClass('minimize')){
-            $('#minimize-video i').removeClass('fa-angle-down').addClass('fa-angle-up');
+            $('#minimize-video i').removeClass('fa-expand').addClass('fa-compress');
             $('.header-videos').removeClass('minimize')
             $('#menu-video').css('height', 'auto');
             $('.body-videos').css('padding-top', $('.header-videos').height() + 30);
         }else{            
-            $('#minimize-video i').removeClass('fa-angle-up').addClass('fa-angle-down');
+            $('#minimize-video i').removeClass('fa-compress').addClass('fa-expand');
             $('.header-videos').addClass('minimize');
             $('#menu-video').css('height', $('#video_player').height());
             $('.body-videos').css('padding-top', $('.header-videos').height() + 30);

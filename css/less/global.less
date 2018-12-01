@@ -1,4 +1,24 @@
-﻿//-- GLOBAL
+﻿
+// MIXINS
+
+.box-shadow(@arg){
+    box-shadow: @arg;
+    -ms-box-shadow: @arg;
+    -webkit-box-shadow: @arg;
+    -moz-box-shadow: @arg;
+    -o-box-shadow: @arg;
+  }
+  
+  .transform(@arg){
+    transform: @arg; 
+    -ms-transform: @arg; 
+    -webkit-transform: @arg; 
+    -moz-transform: @arg; 
+    -o-transform: @arg; 
+  }
+  
+
+//-- GLOBAL
 //---- scaffolding (html, body)
 
 html, body {
@@ -188,6 +208,25 @@ a{
     color: @white-1;
     background-color: transparent;
     font-weight: normal;
+}
+
+.btn-gradient{
+    .btn-padrao;
+    border: none;
+    color: @azul-2;
+    background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+    -webkit-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+    -moz-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+    -o-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+    -ms-background: linear-gradient(94deg, #7B48F7 -10%, #39D3F7 110%);
+    .box-shadow(0px 10px 30px rgba(0, 0, 0, 0.2));
+    &:hover,&:focus{
+        color: @azul-1;
+        background: transparent !important;
+        border: 2px solid @azul-1;
+        padding: 6px 0;
+        .box-shadow(none);
+    }
 }
 
 .form-group{
