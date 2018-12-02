@@ -1,0 +1,139 @@
+
+<div class="header-perfil">
+        <div class="container-fluid">
+            <div class="tituloEditar">
+                <p><strong>Editando Perfil</strong></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <img src="images/svg-icons/perfil_padrao.svg" alt="">
+                    <button id="btn-editar">
+                        <i ng-click="editarPerfil()" class="far fa-edit"></i>
+                    </button>
+                </div>
+                <div class="col-xs-8">
+                       
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txLogin" placeholder="Insira seu Login" autocomplete="off">
+                        </div>
+                       <p class="sobreUsuario"><span id="txIdade">20 anos</span> <span id="txPais">BR - SP</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-perfil">
+        <div class="row margin-bottom-40">
+            <div class="col-xs-12">
+                <button class="btn-verde xs">
+                        <i class="fas fa-cog"></i> Setup
+                </button>
+                <div class="social-icons">
+                    <a id="linkTwitch" href="">
+                            <i class="fab fa-twitch"></i>
+                    </a>
+                    <a id="linkTwitter" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a id="linkYoutube" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a id="linkDiscord" href="">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tabs-container">
+        <div class="tabs-nav">
+            <div class="tabs-1">
+                League of Legends
+            </div>
+            <div onclick="aviso('Ainda não implementamos as funcionalidades do Counter-Strike: Global Offensivena nossa plataforma!<br>Continue ligado para mais informações.', 'Ops!', 'Entendi')" class="tabs-2">
+                CS
+            </div>
+            <div onclick="aviso('Ainda não implementamos as funcionalidades do Dota 2 na nossa plataforma!<br>Continue ligado para mais informações.', 'Ops!', 'Entendi')" class="tabs-3">
+                DOTA
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-perfil">
+        <div class="row margin-top-40">
+            <div class="col-xs-12 center">
+                <h2 class="margin-bottom-20">Vicule sua conta</h2>
+            </div>
+        </div>
+        <div class="row margin-top-40">
+            <div class="col-xs-12 center">
+                <h2 class="margin-bottom-20">Highlights</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 no-padding">
+                <div data-aos="fade-left"
+                data-aos-easing="ease-in"
+                data-aos-duration="300" class="videos-carousel">
+                    <div>
+                        <div class="video-container">
+                            <span><i class="fas fa-play"></i></span>
+                            <img src="images/jpg/demo_video.jpg" alt="">
+                        </div>
+                        <p>Lorem Título</p>
+                    </div>
+                    <div>
+                        <div class="video-container">
+                            <span><i class="fas fa-play"></i></span>
+                            <img src="images/jpg/demo_video.jpg" alt="">
+                        </div>
+                        <p>Lorem Título</p>
+                    </div>
+                    <div>
+                        <div class="video-container">
+                            <span><i class="fas fa-play"></i></span>
+                            <img src="images/jpg/demo_video.jpg" alt="">
+                        </div>
+                        <p>Lorem Título</p>
+                    </div>
+                    <div>
+                        <div class="video-container add">
+                            <span><i class="fas fa-plus"></i></span>
+                            <img src="images/jpg/demo_video.jpg" alt="">
+                        </div>
+                        <p>Adicionar Vídeo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-40">
+            <div class="col-xs-12 center time-info">
+                <h2>Time</h2>
+                <div class="row">
+                    <div class="col-xs-3 no-padding">
+                        <img src="images/png/time_ex.png" alt="imgTime">
+                    </div>
+                    <div class="col-xs-9">
+                        <h5>SKT1 telecom</h5>
+                        <div class="col-xs-6 no-padding left">
+                            <p>Região: <span id="txRegiãoTime">Brasil</span></p>
+                        </div>
+                        <div class="col-xs-6 no-padding right">
+                            <p>Posição: <img id="txPosicaoTime" src="images/svg-icons/mid_lane.svg" alt=""></p>
+                        </div>
+                        <div class="col-xs-6 no-padding left">
+                            <p>Idioma: <span id="txIdiomaTime">PT-BR</span></p>
+                        </div>
+                        <div class="col-xs-6 no-padding right">
+                            <p>Players: <span id="txPlayersTime">3 de 5</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-30">
+            <div class="offset-md-3 col-md-6">
+                <button id="btnVoltar" class="btn-verde">Voltar</button>
+            </div>
+        </div>
+    </div>

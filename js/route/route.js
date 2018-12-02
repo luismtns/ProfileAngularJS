@@ -15,6 +15,11 @@ ngapp.config(function ($routeProvider) {
         controller: 'perfilCTRL',
         activetab: 'perfil'
     })
+    .when('/perfil/editar', {
+        templateUrl: 'view/perfil/editar.html',
+        controller: 'editarCTRL',
+        activetab: 'perfil'
+    })
     .when('/login', {
         templateUrl: 'view/login.html',
         controller: 'loginCTRL',

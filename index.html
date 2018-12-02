@@ -74,6 +74,7 @@
     <script src="js/controller/principal.js"></script>
     <script src="js/controller/ladding.js"></script>
     <script src="js/controller/perfil.js"></script>
+    <script src="js/controller/perfil/editar.js"></script>
     <script src="js/controller/login.js"></script>
     <script src="js/controller/videos.js"></script>
     <script src="js/controller/explorar.js"></script>
@@ -84,6 +85,8 @@
 
     <!-- FUNCOES -->
     <script src="js/f/profilejs.js"></script>
+    <script src="js/f/keyboard.js"></script>
+
 </head>
 
 <body>
@@ -94,7 +97,7 @@
             <div id="f_m"><button onclick="fechar_aviso()" class="btn-rosa">Fechar</button></div>
         </div>
     </div>
-    <div class="hidden" id="desktopAcess">
+    <div id="desktopAcess">
         <div class="container">
             <div class="row margin-top-30">
                 <div class="col-xs-12 center padding-top-30">
@@ -115,7 +118,11 @@
         </div>
     </div>
     <main ng-controller="mainCTRL">
-
+        <div ng-if="showSpin" id="loader" class="sk-cube-overlay pf-grad-overlay">
+            <div class="pf-square">
+            </div>
+        </div>
+        
         <ng-view [onload="showSpin"]></ng-view>
     
         <nav>

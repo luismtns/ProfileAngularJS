@@ -6,7 +6,8 @@
 
     //conexão com o servidor
     // LOCAL
-    $conect = mysqli_connect("localhost", "root", "","profiledb");
+    // $conect = mysqli_connect("localhost", "root", "","profiledb");
+    $conect = mysqli_connect("sql50.main-hosting.eu", "u230645325_pol", "oYbG4YGvSaIR","u230645325_pol");
     
     // HOST
     // $conect = mysqli_connect("localhost", "u230645325_pol", "oYbG4YGvSaIR","u230645325_pol");

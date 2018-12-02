@@ -931,6 +931,18 @@ nav .d-link.active .menu_icon {
 .header-perfil .sobreUsuario #txPais {
   float: right;
 }
+.header-perfil #btn-editar {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #39d3f7;
+  font-size: 16px;
+  line-height: 0;
+  position: relative;
+  top: -13px;
+  padding: 5px 5px 5px 0;
+}
 .body-perfil .social-icons {
   display: inline-block;
   font-size: 30px;
@@ -1047,7 +1059,7 @@ nav .d-link.active .menu_icon {
   font-weight: bold;
 }
 .videos-carousel .slick-slide {
-  margin-right: 20px;
+  margin: 0 20px;
 }
 .videos-carousel .slick-slide .video-container {
   display: block;
@@ -1095,6 +1107,15 @@ nav .d-link.active .menu_icon {
   max-width: 16px;
   display: inline-block;
   vertical-align: middle;
+}
+.videos-carousel .slick-slide .video-container.add {
+  box-shadow: 0px 0px 20px rgba(0, 222, 129, 0.3);
+}
+.header-perfil .tituloEditar {
+  height: 32px;
+  vertical-align: middle;
+  line-height: 32px;
+  text-align: center;
 }
 .header-videos {
   display: block;
@@ -1177,7 +1198,7 @@ nav .d-link.active .menu_icon {
   display: block;
   width: 100%;
   background-color: #242642;
-  padding: 15px 0 5px;
+  padding: 10px 0 10px;
   text-align: center;
 }
 .header-videos #menu-video i {
@@ -1401,11 +1422,6 @@ nav .d-link.active .menu_icon {
   border-radius: 20px;
   background-size: 100% auto !important;
 }
-@media (max-width: 321) {
-  .explorar_c {
-    height: 125px;
-  }
-}
 .explorar_c.participe {
   background: url(../images/jpg/comunidade_bg.jpg) no-repeat center center;
 }
@@ -1414,6 +1430,12 @@ nav .d-link.active .menu_icon {
 }
 .explorar_c.noticias {
   background: url(../images/jpg/noticias_bg.jpg) no-repeat center center;
+}
+@media (max-width: 321px) {
+  .explorar_c {
+    height: 125px !important;
+    background-size: auto 100%!important;
+  }
 }
 .header-participe {
   display: block;
@@ -1607,19 +1629,18 @@ nav .d-link.active .menu_icon {
   height: 100%;
   z-index: 9999999999999999999;
   background-color: #2d3052;
-  overflow-y: scroll;
   overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .body-ladding .banner-topo {
+  max-width: 100%;
+  width: 100%;
   background: #2d3052 url('../images/jpg/lp/banner_topo.jpg') top center no-repeat;
   background-size: 100% auto;
   min-height: 80vh;
   padding-top: 70%;
-  animation-name: bgAlternate;
-  animation-duration: 5s;
-  animation-delay: 0;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  background-position: 0% -90%;
 }
 .body-ladding .saiba-mais {
   line-height: 1;
@@ -1627,6 +1648,12 @@ nav .d-link.active .menu_icon {
 }
 .body-ladding .saiba-mais p {
   margin: 0;
+}
+.body-ladding .c-infografico {
+  max-width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .body-ladding .c-infografico p {
   font-size: 18px;
@@ -1682,7 +1709,7 @@ nav .d-link.active .menu_icon {
 .enableSite #desktopAcess {
   display: none !important;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   main {
     display: none;
   }
@@ -1690,11 +1717,11 @@ nav .d-link.active .menu_icon {
     display: block !important;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 767px) {
   main {
-    display: none;
+    display: block;
   }
   #desktopAcess {
-    display: block !important;
+    display: none !important;
   }
 }

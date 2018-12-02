@@ -30,6 +30,18 @@
             float: right;
         }
     }
+    #btn-editar{
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        color: @azul-1;
+        font-size: 16px;
+        line-height: 0;
+        position: relative;
+        top: -13px;
+        padding: 5px 5px 5px 0;
+    }
 }
 .body-perfil{
     .social-icons{
@@ -162,7 +174,7 @@
 
 .videos-carousel{
     .slick-slide{
-        margin-right: 20px;
+        margin: 0 20px;
         .video-container{
             display: block;
             position: relative;
@@ -213,5 +225,24 @@
         max-width: 16px;
         display: inline-block;
         vertical-align: middle;
+    }
+}
+
+// EDITAR PERFIL
+
+
+.videos-carousel{
+    .slick-slide{
+        .video-container.add{
+            box-shadow: 0px 0px 20px rgba(0, 222, 129, 0.30);
+        }
+    }
+}
+.header-perfil{
+    .tituloEditar{
+        height: 32px;
+        vertical-align: middle;
+        line-height: 32px;
+        text-align: center;
     }
 }

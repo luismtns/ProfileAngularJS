@@ -11,6 +11,10 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
     
     if(userLogado == false){
         window.location.href = '#/login'
+    }else{
+        $scope.editarPerfil = function () {
+            window.location.href = '#/perfil/editar'
+        }
     }
 
     $scope.nome = userName; 

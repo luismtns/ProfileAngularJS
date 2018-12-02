@@ -1,6 +1,5 @@
 
 ngapp.controller("pesquisarCTRL", function ($scope, $route) {
-    AOS.refresh();
     verificarLogin();
 
     setTimeout(function(){
