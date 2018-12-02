@@ -1144,6 +1144,7 @@ nav .d-link.active .menu_icon {
   width: 100%;
   height: auto;
   display: block;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .header-videos .video-box #cvideoprogress {
   height: 6px;

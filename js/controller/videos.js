@@ -25,6 +25,14 @@
         }
     });
 
+    $('#video_player').on('loadstart', function (event) {
+        $(this).addClass('loading');
+      });
+    $('#video_player').on('canplay', function (event) {
+        $(this).removeClass('loading');
+        // $(this).attr('poster', '');
+    });
+
     $(document).ready(function(){
         var _originalSize = $(window).width() + $(window).height()
         $(window).resize(function(){
@@ -45,6 +53,7 @@
         arrows: false,
       });
 
+      
      
 
 setTimeout(()=>{
