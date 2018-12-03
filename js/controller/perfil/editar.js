@@ -6,6 +6,38 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
         window.location.href = '#/login'
     }
 
+    $('#txPlayersTime').mask('Z', {
+        translation: {
+          'Z': {
+            pattern: /^[1-5][0-5]?$|^1$/
+          }
+        }
+    });
+
+    $('#txIdade').mask('ZZ', {
+        translation: {
+          'Z': {
+            pattern: /^[0-9][0-9]?$|^2$/
+          }
+        }
+    });
+
+    $('#txPais').mask('ZZ', {
+        translation: {
+          'Z': {
+            pattern: /^[A-Z]{2}$/
+          }
+        }
+    });
+
+    $('#txEstado').mask('ZZ', {
+        translation: {
+          'Z': {
+            pattern: /^[A-Z]{2}$/
+          }
+        }
+    });
+
     $('.videos-carousel').slick({
         infinite: false,
         slidesToShow: 1.5,
@@ -142,6 +174,31 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
             form_data.append('txIdioma2', txIdioma2);
             target ++;
         }
+        var txLOL = $('#txLOL').val();
+        if(txLOL != ""){
+            form_data.append('txLOL', txLOL);
+            target ++;
+        }
+        var txTwitch = $('#txTwitch').val();
+        if(txTwitch != ""){
+            form_data.append('txTwitch', txTwitch);
+            target ++;
+        }
+        var txTwitter = $('#txTwitter').val();
+        if(txTwitter != ""){
+            form_data.append('txTwitter', txTwitch);
+            target ++;
+        }
+        var txYoutube = $('#txYoutube').val();
+        if(txYoutube != ""){
+            form_data.append('txYoutube', txYoutube);
+            target ++;
+        }
+        var txDiscord = $('#txDiscord').val();
+        if(txDiscord != ""){
+            form_data.append('txDiscord', txDiscord);
+            target ++;
+        }
         var txCPU = $('#txCPU').val();
         if(txCPU != ""){
             form_data.append('txCPU', txCPU);
@@ -187,29 +244,9 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
             form_data.append('txFone', txFone);
             target ++;
         }
-        var txTwitch = $('#txTwitch').val();
-        if(txTwitch != ""){
-            form_data.append('txTwitch', txTwitch);
-            target ++;
-        }
-        var txTwitter = $('#txTwitter').val();
-        if(txTwitter != ""){
-            form_data.append('txTwitter', txTwitch);
-            target ++;
-        }
-        var txYoutube = $('#txYoutube').val();
-        if(txYoutube != ""){
-            form_data.append('txYoutube', txYoutube);
-            target ++;
-        }
-        var txDiscord = $('#txDiscord').val();
-        if(txDiscord != ""){
-            form_data.append('txDiscord', txDiscord);
-            target ++;
-        }
-        var txLOL = $('#txLOL').val();
-        if(txLOL != ""){
-            form_data.append('txLOL', txLOL);
+        var txNomeTime = $('#txNomeTime').val();
+        if(txNomeTime != ""){
+            form_data.append('txNomeTime', txNomeTime);
             target ++;
         }
         var txRegiaoTime = $('#txRegiaoTime').val();
@@ -229,13 +266,13 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
         }
         console.log(target);
         if(target < 1){
-            aviso('Nenhuma alteraÃ§Ã£o aplicada.<br>Voltando ao perfil!', 'Tudo Bem!', 'Entendi');
+            aviso('Nenhuma alterações aplicada.<br>Voltando ao perfil!', 'Tudo Bem!', 'Entendi');
             return window.location.href = '#/perfil';
         }
 
     $.ajax({
         url: "php/salvaDados.php",
-        dataType: 'text',  // what to expect back from the PHP script, if anything
+        dataType: 'text',
         cache: false,
         contentType: false,
         processData: false,
