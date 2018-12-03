@@ -97,35 +97,67 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
             var data = data['response'];
             console.log(JSON.stringify(data));
             // FOTO
-            var imageUrl = data['FOTO'];
-            $('#imgShape').css('background-image', 'url( "profile_pics/' + imageUrl + '")');
+            
+            if(data['FOTO'] != ""){
+                var imageUrl = data['FOTO'];
+                $('#imgShape').css('background-image', 'url( "profile_pics/' + imageUrl + '")');
+            }
             // HEADER
-            $('#nomeUsuario').text(data['NOME'] + ' "' + data['NICK'] + '" ' + data['SOBRENOME']);
+            if(data['NOME'] != ""){
+                $('#nomeUsuario').append(data['NOME']);
+            }
+            if(data['NICK']){                
+                $('#nomeUsuario').append(' "' + data['NICK'] + '" ');
+            }
+            if(data['SOBRENOME']){                
+                $('#nomeUsuario').append(data['SOBRENOME']);
+            }
             $('#txIdade').text(data['IDADE'] + " anos");
             $('#txPais').text(data['PAIS'].toUpperCase() + " - " + data['ESTADO'].toUpperCase());
 
             // SETUP
-            $('#txCPU').text(data['CPU']);
-            $('#txHD').text(data['HD']);
-            $('#txRAM').text(data['RAM']);
-            $('#txGPU').text(data['GPU']);
-            $('#txPLACAMAE').text(data['PLACAMAE']);
-            $('#txMOUSE').text(data['MOUSE']);
-            $('#txTECLADO').text(data['TECLADO']);
-            $('#txFONE').text(data['FONE']);
-            $('#txMONITOR').text(data['MONITOR']);
+            
+            if(data['CPU'] != ""){
+                $('#txCPU').text(data['CPU']);
+            }
+            if(data['HD'] != ""){
+                $('#txHD').text(data['HD']);
+            }
+            if(data['RAM'] != ""){
+                $('#txRAM').text(data['RAM']);
+            }
+            if(data['RAM'] != ""){
+                $('#txGPU').text(data['RAM']);
+            }
+            if(data['PLACAMAE'] != ""){
+                $('#txPLACAMAE').text(data['PLACAMAE']);
+            }
+            if(data['MOUSE'] != ""){
+                $('#txMOUSE').text(data['MOUSE']);
+            }
+            if(data['TECLADO'] != ""){
+                $('#txTECLADO').text(data['TECLADO']);
+            }
+            if(data['TECLADO'] != ""){
+                $('#txFONE').text(data['TECLADO']);
+            }
+            if(data['MONITOR'] != ""){
+                $('#txMONITOR').text(data['MONITOR']);
+            }
 
             // Links
-            $('#linkTwitch').attr("href", "https://www.twitch.tv/"+data['TWITCH']);
-            $('#linkTwitter').attr("href", "https://twitter.com/"+data['TWITTER']);
-            $('#linkYoutube').attr("href", "https://www.youtube.com/user/"+data['YOUTUBE']);
-            $('#linkDiscord').attr("href", data['DISCORD']);
-
-            // Time
-            $('#txRegiãoTime').attr("href", "https://www.twitch.tv/"+data['TWITCH']);
-            $('#linkTwitter').attr("href", "https://twitter.com/"+data['TWITTER']);
-            $('#linkYoutube').attr("href", "https://www.youtube.com/user/"+data['YOUTUBE']);
-            $('#linkDiscord').attr("href", data['DISCORD']);
+            if(data['TWITCH'] != ""){
+                $('#txRegiãoTime').attr("href", "https://www.twitch.tv/"+data['TWITCH']);
+            }
+            if(data['TWITTER'] != ""){
+                $('#linkTwitter').attr("href", "https://twitter.com/"+data['TWITTER']);
+            }
+            if(data['YOUTUBE'] != ""){
+                $('#linkYoutube').attr("href", "https://www.youtube.com/user/"+data['YOUTUBE']);
+            }
+            if(data['DISCORD'] != ""){
+                $('#linkDiscord').attr("href", data['DISCORD']);
+            }
 
             // Time
             

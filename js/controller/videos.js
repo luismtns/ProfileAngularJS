@@ -9,7 +9,7 @@
         $('.body-videos').css('padding-top', $('.header-videos').height() + 30);
         if($('.header-videos').hasClass('minimize'))
             $('#menu-video').css('height', $('#video_player').height());
-    }, 300)
+    }, 400)
 
     $('#minimize-video').click(()=>{
         if($('.header-videos').hasClass('minimize')){
