@@ -265,24 +265,44 @@ a{
         margin-top: 10px;
         padding-left: 21px;
         text-align: center;
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: @white-1 !important;
+            opacity: 1; /* Firefox */
+        }
+        
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: @white-1 !important;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: @white-1 !important;
+        }
+        &:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+            background-color: transparent !important;
+            background-image: none !important;
+            color: @white-1 !important;
+        }
+    }
+    &select{
+
     }
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: @white-1 !important;
+    color: @azul-3 !important;
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: @white-1 !important;
+    color: @azul-3 !important;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: @white-1 !important;
+    color: @azul-3 !important;
 }
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-color: transparent !important;
     background-image: none !important;
-    color: @white-1 !important;
+    color: @azul-3 !important;
 }
 
 .cb-blank{

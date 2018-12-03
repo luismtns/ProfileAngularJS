@@ -86,7 +86,7 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
     }
 
     $scope.salvarAlteracoes = function () {
-        var target = 0;
+
         var form_data = new FormData(); 
         var userSession = JSON.parse(localStorage.getItem('user'))['userSession'];
         form_data.append('userSession', userSession)
@@ -94,144 +94,121 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
         var fotoPerfil = $('#fotoPerfil')[0].files[0];
         if(fotoPerfil != undefined){
             form_data.append('file', fotoPerfil);
-            target ++
         }
 
         var fotoTime = $('#fotoTime')[0].files[0];
         if(fotoTime != undefined){
             form_data.append('file2', fotoTime);
-            target ++
         }
         var txNome = $('#txNome').val();
         if(txNome != ""){
-            form_data.append('txNome', txNome);
-            target ++;
+            form_data.append('txNome', txNome)
         }
         var txNick = $('#txNick').val();
         if(txNick != ""){
-            form_data.append('txNick', txNick);
-            target ++;
+            form_data.append('txNick', txNick)
         }
         var txSobrenome = $('#txSobrenome').val();
         if(txSobrenome != ""){
-            form_data.append('txSobrenome', txSobrenome);
-            target ++;
+            form_data.append('txSobrenome', txSobrenome)
         }
         var txIdade = $('#txIdade').val();
         if(txIdade != ""){
-            form_data.append('txIdade', txIdade);
-            target ++;
+            form_data.append('txIdade', txIdade)
         }
         var txPais = $('#txPais').val();
         if(txPais != ""){
-            form_data.append('txPais', txPais);
-            target ++;
+            form_data.append('txPais', txPais)
         }
         var txEstado = $('#txEstado').val();
         if(txEstado != ""){
-            form_data.append('txEstado', txEstado);
-            target ++;
+            form_data.append('txEstado', txEstado)
         }
         var txIdioma1 = $('#txIdioma1').val();
         if(txIdioma1 != ""){
-            form_data.append('txIdioma1', txIdioma1);
-            target ++;
+            form_data.append('txIdioma1', txIdioma1)
         }
         var txIdioma2 = $('#txIdioma2').val();
         if(txIdioma2 != ""){
-            form_data.append('txIdioma2', txIdioma2);
-            target ++;
+            form_data.append('txIdioma2', txIdioma2)
         }
         var txCPU = $('#txCPU').val();
         if(txCPU != ""){
-            form_data.append('txCPU', txCPU);
-            target ++;
+            form_data.append('txCPU', txCPU)
         }
         var txHD = $('#txHD').val();
         if(txHD != ""){
-            form_data.append('txHD', txHD);
-            target ++;
+            form_data.append('txHD', txHD)
         }
         var txRAM = $('#txRAM').val();
         if(txRAM != ""){
-            form_data.append('txRAM', txRAM);
-            target ++;
+            form_data.append('txRAM', txRAM)
         }
         var txGPU = $('#txGPU').val();
         if(txGPU != ""){
-            form_data.append('txGPU', txGPU);
-            target ++;
+            form_data.append('txGPU', txGPU)
         }
         var txPlacaMae = $('#txPlacaMae').val();
         if(txPlacaMae != ""){
-            form_data.append('txPlacaMae', txPlacaMae);
-            target ++;
+            form_data.append('txPlacaMae', txPlacaMae)
         }
         var txMouse = $('#txMouse').val();
         if(txMouse != ""){
-            form_data.append('txMouse', txMouse);
-            target ++;
+            form_data.append('txMouse', txMouse)
         }
         var txTeclado = $('#txTeclado').val();
         if(txTeclado != ""){
-            form_data.append('txTeclado', txTeclado);
-            target ++;
+            form_data.append('txTeclado', txTeclado)
         }
         var txMonitor = $('#txMonitor').val();
         if(txMonitor != ""){
-            form_data.append('txMonitor', txMonitor);
-            target ++;
+            form_data.append('txMonitor', txMonitor)
         }
         var txFone = $('#txFone').val();
         if(txFone != ""){
-            form_data.append('txFone', txFone);
-            target ++;
+            form_data.append('txFone', txFone)
         }
         var txTwitch = $('#txTwitch').val();
         if(txTwitch != ""){
-            form_data.append('txTwitch', txTwitch);
-            target ++;
+            form_data.append('txTwitch', txTwitch)
         }
         var txTwitter = $('#txTwitter').val();
         if(txTwitter != ""){
-            form_data.append('txTwitter', txTwitch);
-            target ++;
+            form_data.append('txTwitter', txTwitch)
         }
         var txYoutube = $('#txYoutube').val();
         if(txYoutube != ""){
-            form_data.append('txYoutube', txYoutube);
-            target ++;
+            form_data.append('txYoutube', txYoutube)
         }
         var txDiscord = $('#txDiscord').val();
         if(txDiscord != ""){
-            form_data.append('txDiscord', txDiscord);
-            target ++;
+            form_data.append('txDiscord', txDiscord)
         }
         var txLOL = $('#txLOL').val();
         if(txLOL != ""){
-            form_data.append('txLOL', txLOL);
-            target ++;
+            form_data.append('txLOL', txLOL)
         }
         var txRegiaoTime = $('#txRegiaoTime').val();
         if(txRegiaoTime != ""){
-            form_data.append('txRegiaoTime', txRegiaoTime);
-            target ++;
+            form_data.append('txRegiaoTime', txRegiaoTime)
         }
         var txPosicaoTime = $('#txPosicaoTime').val();
         if(txPosicaoTime != ""){
-            form_data.append('txPosicaoTime', txPosicaoTime);
-            target ++;
+            form_data.append('txPosicaoTime', txPosicaoTime)
         }
         var txPlayersTime = $('#txPlayersTime').val();
         if(txPlayersTime != ""){
-            form_data.append('txPlayersTime', txPlayersTime);
-            target ++;
+            form_data.append('txPlayersTime', txPlayersTime)
         }
-        console.log(target);
-        if(target < 1){
-            aviso('Nenhuma alteração aplicada.<br>Voltando ao perfil!', 'Tudo Bem!', 'Entendi');
-            return window.location.href = '#/perfil';
-        }
+        // for(var contForm of form_data.entries()) {
+        //     contForm + 1;
+        // }
+        var contForm = form_data.get('txSobrenome');
+        console.log(contForm);
+        // if(contForm.length <=2){
+        //     aviso('Nenhuma alteração aplicada.<br>Voltando ao perfil!', 'Tudo Bem!', 'Entendi');
+        //     return window.location.href = '#/perfil';
+        // }
 
     $.ajax({
         url: "php/salvaDados.php",

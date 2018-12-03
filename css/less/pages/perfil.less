@@ -228,6 +228,43 @@
     }
 }
 
+#setup{
+    z-index: 99999999999999999999;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    .m_content{
+        width: 100%;
+        max-width: 90%;
+        min-height: 1px;
+        position: relative;
+        top: 40px;
+        right: auto;
+        left: auto;
+        margin: 0 auto;
+        background-color: @azul-2;
+        padding: 15px;
+        border-radius: 15px;
+        .h_m{
+        text-align: center;
+        }
+        .b_m{
+    
+        }
+        .f_m{
+        button{
+            margin-top: 20px;
+        }
+        }
+    }
+}
+
 // EDITAR PERFIL
 
 
@@ -238,11 +275,59 @@
         }
     }
 }
-.header-perfil{
-    .tituloEditar{
-        height: 32px;
-        vertical-align: middle;
-        line-height: 32px;
-        text-align: center;
+
+.editar{
+    label{
+        font-weight: normal;
+        font-size: 10px;
+        margin-bottom: 0;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
     }
+    .form-group{
+        margin-bottom: 10px;
+        .form-control{
+            margin:0;
+        }
+    }
+    .uploadFoto{
+        input{
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+
+        }
+        input + label {
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 0;
+            text-align: center;
+            color: @verde-1;
+            border: 2px solid @verde-1;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        input:focus + label,
+        input + label:hover {
+            background-color: @verde-1;
+            color: @white-1;
+        }
+    }
+}
+.header-perfil{
+    #btnVoltar{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 9999;
+    }
+    .editar;
+}
+.body-perfil{    
+    .editar;
 }

@@ -25,9 +25,61 @@
 <div class="container body-perfil">
     <div class="row margin-bottom-40">
         <div class="col-xs-12">
-            <button class="btn-verde xs">
+            <button ng-click="abrirSetup()" class="btn-verde xs">
                     <i class="fas fa-cog"></i> Setup
             </button>
+            <div id="setup" class="hidden">
+                <div class="m_content">
+                    <div class="h_m">
+                        <h3>Setup</h3>
+                    </div>
+                    <div class="b_m">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>CPU</td>
+                                    <td><span id="txCPU">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>HD</td>
+                                    <td><span id="txHD">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td><span id="txRAM">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>GPU</td>
+                                    <td><span id="txGPU">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>PLACA MÃE</td>
+                                    <td><span id="txPLACAMAE">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>MOUSE</td>
+                                    <td><span id="txMOUSE">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>TECLADO</td>
+                                    <td><span id="txTECLADO">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>FONE</td>
+                                    <td><span id="txFONE">-</span></td>
+                                </tr>
+                                <tr>
+                                    <td>MONITOR</td>
+                                    <td><span id="txMONITOR">-</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="m_f">
+                        <div id="f_m"><button ng-click="fecharSetup()" class="btn-rosa">Fechar</button></div>
+                    </div>
+                </div>
+            </div>
             <div class="social-icons">
                 <a id="linkTwitch" href="">
                         <i class="fab fa-twitch"></i>

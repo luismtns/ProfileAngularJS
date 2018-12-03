@@ -32,10 +32,9 @@
         $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
         $sql = "INSERT INTO usuario (USER, EMAIL, SENHA) VALUES ('$login', '$email', '$senha')";
         mysqli_query($conect, $sql) or die($bd_error);
-        
+        $userSession = base64_encode($login) . '&' . base64_encode($email); 
         $userinfo = array(
-            'login' => $login,
-            'email' => $email
+            'userSession' => $userSession
         );
         $validation_error = '';
     }else{

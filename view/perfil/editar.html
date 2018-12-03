@@ -1,139 +1,328 @@
 
 <div class="header-perfil">
-        <div class="container-fluid">
-            <div class="tituloEditar">
-                <p><strong>Editando Perfil</strong></p>
+    <div class="container-fluid editar">
+        <div class="row margin-top-20">
+            <div class="col-xs-12 center">
+                <i ng-click="btnVoltar()" id="btnVoltar" class="material-icons">
+                        arrow_back
+                </i>
+                <h3><strong>Editar Perfil</strong></h3>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <img src="images/svg-icons/perfil_padrao.svg" alt="">
-                    <button id="btn-editar">
-                        <i ng-click="editarPerfil()" class="far fa-edit"></i>
-                    </button>
-                </div>
-                <div class="col-xs-8">
-                       
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="txLogin" placeholder="Insira seu Login" autocomplete="off">
-                        </div>
-                       <p class="sobreUsuario"><span id="txIdade">20 anos</span> <span id="txPais">BR - SP</span></p>
-                </div>
+
+        <div class="row editar margin-top-20">
+            <div class="col-xs-12 uploadFoto">
+                <input id="fotoPerfil" type="file" name="arquivo" accept="image/png, image/jpeg">
+                <label for="fotoPerfil">Selecione uma foto de perfil</label>
             </div>
         </div>
-    </div>
-    <div class="container body-perfil">
-        <div class="row margin-bottom-40">
+        
+        <div class="row margin-top-20">
             <div class="col-xs-12">
-                <button class="btn-verde xs">
-                        <i class="fas fa-cog"></i> Setup
-                </button>
-                <div class="social-icons">
-                    <a id="linkTwitch" href="">
-                            <i class="fab fa-twitch"></i>
-                    </a>
-                    <a id="linkTwitter" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a id="linkYoutube" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a id="linkDiscord" href="">
-                        <i class="fab fa-discord"></i>
-                    </a>
+                <label for="txNome">Nome</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txNome" placeholder="Primeiro Nome" maxlength="20" autocomplete="off">
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id="tabs-container">
-        <div class="tabs-nav">
-            <div class="tabs-1">
-                League of Legends
-            </div>
-            <div onclick="aviso('Ainda não implementamos as funcionalidades do Counter-Strike: Global Offensivena nossa plataforma!<br>Continue ligado para mais informações.', 'Ops!', 'Entendi')" class="tabs-2">
-                CS
-            </div>
-            <div onclick="aviso('Ainda não implementamos as funcionalidades do Dota 2 na nossa plataforma!<br>Continue ligado para mais informações.', 'Ops!', 'Entendi')" class="tabs-3">
-                DOTA
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid body-perfil">
-        <div class="row margin-top-40">
-            <div class="col-xs-12 center">
-                <h2 class="margin-bottom-20">Vicule sua conta</h2>
-            </div>
-        </div>
-        <div class="row margin-top-40">
-            <div class="col-xs-12 center">
-                <h2 class="margin-bottom-20">Highlights</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 no-padding">
-                <div data-aos="fade-left"
-                data-aos-easing="ease-in"
-                data-aos-duration="300" class="videos-carousel">
-                    <div>
-                        <div class="video-container">
-                            <span><i class="fas fa-play"></i></span>
-                            <img src="images/jpg/demo_video.jpg" alt="">
-                        </div>
-                        <p>Lorem Título</p>
-                    </div>
-                    <div>
-                        <div class="video-container">
-                            <span><i class="fas fa-play"></i></span>
-                            <img src="images/jpg/demo_video.jpg" alt="">
-                        </div>
-                        <p>Lorem Título</p>
-                    </div>
-                    <div>
-                        <div class="video-container">
-                            <span><i class="fas fa-play"></i></span>
-                            <img src="images/jpg/demo_video.jpg" alt="">
-                        </div>
-                        <p>Lorem Título</p>
-                    </div>
-                    <div>
-                        <div class="video-container add">
-                            <span><i class="fas fa-plus"></i></span>
-                            <img src="images/jpg/demo_video.jpg" alt="">
-                        </div>
-                        <p>Adicionar Vídeo</p>
-                    </div>
+            <div class="col-xs-12">
+                <label for="txNick">Nick</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txNick" placeholder="Apelido Gamer" autocomplete="off" maxlength="15">
                 </div>
             </div>
         </div>
-        <div class="row margin-top-40">
-            <div class="col-xs-12 center time-info">
-                <h2>Time</h2>
-                <div class="row">
-                    <div class="col-xs-3 no-padding">
-                        <img src="images/png/time_ex.png" alt="imgTime">
-                    </div>
-                    <div class="col-xs-9">
-                        <h5>SKT1 telecom</h5>
-                        <div class="col-xs-6 no-padding left">
-                            <p>Região: <span id="txRegiãoTime">Brasil</span></p>
-                        </div>
-                        <div class="col-xs-6 no-padding right">
-                            <p>Posição: <img id="txPosicaoTime" src="images/svg-icons/mid_lane.svg" alt=""></p>
-                        </div>
-                        <div class="col-xs-6 no-padding left">
-                            <p>Idioma: <span id="txIdiomaTime">PT-BR</span></p>
-                        </div>
-                        <div class="col-xs-6 no-padding right">
-                            <p>Players: <span id="txPlayersTime">3 de 5</span></p>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="txSobrenome">Sobrenome</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txSobrenome" placeholder="Sobrenome" maxlength="20" autocomplete="off">
                 </div>
             </div>
         </div>
-        <div class="row margin-top-30">
-            <div class="offset-md-3 col-md-6">
-                <button id="btnVoltar" class="btn-verde">Voltar</button>
+        <div class="row">
+            <div class="col-xs-4 no-padding-right">
+                <label for="txIdade">Idade</label>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="txIdade" placeholder="Sua Idade" autocomplete="off" maxlength="3" >
+                </div>
+            </div>
+            <div class="col-xs-4 no-padding-right">
+                <label for="txPais">País</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txPais" placeholder="Ex.: BR" maxlength="2" style="text-transform: uppercase;" autocomplete="off">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <label for="txEstado">Estado</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txEstado" placeholder="Ex.: SP" maxlength="2" style="text-transform: uppercase;" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <label for="txIdioma1">Idioma 1</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txIdioma1" placeholder="Ex: PT-BR" maxlength="10" autocomplete="off">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <label for="txIdioma2">Idioma 2</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txIdioma2" placeholder="Ex: EN-US" maxlength="10" autocomplete="off">
+                </div>
             </div>
         </div>
     </div>
+</div>
+<div class="container body-perfil ">
+    <div class="row">
+        <div class="col-xs-12 center">
+            <h3>Setup</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txCPU">CPU</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txCPU" placeholder="Identifique sua CPU" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txHD">HD</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txHD" placeholder="Identifique seu HD" autocomplete="off" maxlength="15">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txRAM">RAM</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txRAM" placeholder="Identifique sua memória RAM" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txGPU">Placa de Vídeo</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txGPU" placeholder="Identifique sua placa de vídeo" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txPlacaMae">Placa Mãe</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txPlacaMae" placeholder="Identifique sua placa mãe" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txMouse">Mouse</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txMouse" placeholder="Identifique seu mouse" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txTeclado">Teclado</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txTeclado" placeholder="Identifique seu teclado" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txMonitor">Monitor</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txMonitor" placeholder="Identifique seu monitor" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="txFone">Fone</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txFone" placeholder="Identifique seu fone" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row editar">
+        <div class="col-xs-12 center margin-top-40">
+            <h3>Link Redes Socias</h3>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-xs-2 center">    
+            <div class="social-icons">     
+                <a>
+                    <i  class="fab fa-twitch"></i>
+                </a>   
+            </div>
+        </div>
+        <div class="col-xs-10">             
+            <input type="text" class="form-control" id="txTwitch" placeholder="Ex.: www.twitch.tv/seu_user " maxlength="30" autocomplete="off">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-xs-2 center">    
+            <div class="social-icons">     
+                <a>
+                    <i class="fab fa-twitter"></i>
+                </a>   
+            </div>
+        </div>
+        <div class="col-xs-10">             
+            <input type="text" class="form-control" id="txTwitter" placeholder="Ex.: www.twitter.com/seu_user" maxlength="30" autocomplete="off">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-xs-2 center">    
+            <div class="social-icons">     
+                <a>
+                    <i class="fab fa-youtube"></i>
+                </a>   
+            </div>
+        </div>
+        <div class="col-xs-10">             
+            <input type="text" class="form-control" id="txYoutube" placeholder="Ex.: www.yotube.com/seu_user" maxlength="30" autocomplete="off">
+        </div>
+    </div>
+    <div class="row form-group margin-bottom-40">
+        <div class="col-xs-2 center">    
+            <div class="social-icons">     
+                <a>                    
+                    <i class="fab fa-discord"></i>
+                </a>   
+            </div>
+        </div>
+        <div class="col-xs-10">             
+            <input type="text" class="form-control" id="txDiscord" placeholder="Ex.: user#tag" maxlength="30" autocomplete="off">
+        </div>
+    </div>
+</div>
+<div id="tabs-container">
+    <div class="tabs-nav">
+        <div class="tabs-1">
+            League of Legends
+        </div>
+        <div onclick="aviso('Ainda não implementamos as funcionalidades do Counter-Strike: Global Offensivena nossa plataforma!<br>Continue ligado para mais informações.', 'Ops!', 'Entendi')" class="tabs-2">
+            CS
+        </div>
+        <div onclick="aviso('Ainda não implementamos as funcionalidades do Dota 2 na nossa plataforma!<br>Continue ligado para mais informações.', 'Ops!', 'Entendi')" class="tabs-3">
+            DOTA
+        </div>
+    </div>
+</div>
+<div class="container-fluid body-perfil">
+    <div class="row margin-top-40">
+        <div class="col-xs-12 center">
+            <h2 class="margin-bottom-20">Vicule sua conta</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 editar">
+            <label for="txLOL">Insira o nick da sua conta no League of Legends</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txLOL" placeholder="Vazio" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-40">
+        <div class="col-xs-12 center">
+            <h2 class="margin-bottom-20">Highlights</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="videos-carousel">
+            <div>
+                <div class="video-container">
+                    <span><i class="fas fa-play"></i></span>
+                    <img src="images/jpg/demo_video.jpg" alt="">
+                </div>
+                <p>Lorem Título</p>
+            </div>
+            <div>
+                <div class="video-container">
+                    <span><i class="fas fa-play"></i></span>
+                    <img src="images/jpg/demo_video.jpg" alt="">
+                </div>
+                <p>Lorem Título</p>
+            </div>
+            <div>
+                <div class="video-container">
+                    <span><i class="fas fa-play"></i></span>
+                    <img src="images/jpg/demo_video.jpg" alt="">
+                </div>
+                <p>Lorem Título</p>
+            </div>
+            <div>
+                <div class="video-container add">
+                    <span><i class="fas fa-plus"></i></span>
+                    <img src="images/jpg/demo_video.jpg" alt="">
+                </div>
+                <p>Adicionar Vídeo</p>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-40">
+        <div class="col-xs-12 center">
+            <h2>Time</h2>
+        </div>
+    </div>
+    <div class="row editar margin-top-20">
+        <div class="col-xs-12 uploadFoto">
+            <input id="fotoTime" type="file" name="arquivo" accept="image/png, image/jpeg">
+            <label for="fotoTime">Selecione o logo do seu Time</label>
+        </div>
+    </div>
+    <div class="row editar margin-top-20">
+        <div class="col-xs-12">
+            <label for="txNomeTime">Nome</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txNomeTime" placeholder="Nome do seu Time" maxlength="30" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <label for="txRegiaoTime">Região</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txRegiaoTime" placeholder="Região do Time" maxlength="30" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <label for="txPosicaoTime">Sua posição</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txPosicaoTime" placeholder="Ex.: Mid" maxlength="30" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <label for="txIdiomaTime">Idioma</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txIdiomaTime" placeholder="Idioma Principal" maxlength="30" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <label for="txPlayersTime">Numero de Players</label>
+            <div class="form-group">
+                <input type="number" class="form-control" id="txPlayersTime" placeholder="Total de Players" maxlength="3" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-30">
+        <div class="offset-md-3 col-md-6">
+            <button ng-click="salvarAlteracoes()" class="btn-verde">Salvar</button>
+        </div>
+    </div>
+</div>
