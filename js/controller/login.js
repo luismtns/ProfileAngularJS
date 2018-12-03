@@ -71,21 +71,15 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
             }
         })
         .done(function(data){
-            try{
 
-                if(data.error != ''){
-                    data = data['response'];
-                    alert(data['error']);
-                    console.log(data);
-                    return
-                }else{
-                    salvarSessao(data);
-                    console.log(data);
-                    window.location.href='#/perfil';
-                }
-            }catch(err){
-                alert('Erro Interno.');
-                console.log(data);
+            if(data.error != ''){
+                aviso(data['error'], 'Tente outro usuário.');
+                // console.log(data);
+            }else{
+                salvarSessao(data);
+                // console.log(data);
+                window.location.href='#/perfil/editar';
+                aviso('<center>Seja muito bem a plataforma PROFILE, vamos começar?<br>Insira seus dados e depois salve, não se preocupe em deixar algo em branco.</center>', 'Bem Vindo!', 'Entendi');
             }
             hideLoad();
         })
@@ -106,22 +100,15 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
                 'senha': txSenha
             }
         })
-        .done(function(data){
-            // try{          
+        .done(function(data){         
                 if(data.error != ''){
-                    data = data['response'];  
-                    alert(data['error']);
+                    aviso(data['error'], 'OPS!')
                     console.log(data);
-                    return
                 }else{
                     salvarSessao(data);
                     console.log(data['user']);
                     window.location.href='#/perfil';
                 }
-            // }catch(err){
-            //     alert('Erro Interno.');
-            //     console.log(data);
-            // }
             hideLoad();
         })
         .fail(function(jqXHR, textStatus){

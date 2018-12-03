@@ -12,4 +12,11 @@ ngapp.controller("laddingCTRL", function ($scope, $route) {
     if(window.location.hash == '#/ladding'){
         marcarVisitante();
     }
+
+    $scope.btnRegistrar = function () {
+        window.location.href = '#/login';
+        setTimeout(()=>{
+            $('#btnRegistrarTela').click();
+        }, 50)
+    }
 });

@@ -103,13 +103,13 @@ ngapp.controller("editarCTRL", function ($scope, $route) {
     }).done(function (resposta) {
         hideLoad();
 
-        aviso('Muito Bem!', 'Dados Alterados com Sucesso!');
+        aviso('Dados Alterados com Sucesso!', 'Muito Bem!');
         window.location.href = '#/perfil';
         console.log(resposta);
 
     }).fail(function (res, textStatus) {
         hideLoad();
-        
+
         console.log("Request failed: " + JSON.stringify(res));
         aviso('Erro Interno no Servidor.');
         window.location.href = '#/perfil';
