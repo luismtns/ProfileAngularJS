@@ -283,9 +283,24 @@ a{
             color: @white-1 !important;
         }
     }
-    &select{
-
-    }
+}
+select.form-control{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    background: url(../images/png/arrow.png) no-repeat right transparent;
+    -webkit-appearance: none;
+    background-position-x: 97%;
+    option {
+        margin: 40px;
+        background: rgb(45, 48, 82);
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+        &[selected="selected"]{
+            background: rgb(131, 136, 195);
+        }
+      }      
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: @azul-3 !important;

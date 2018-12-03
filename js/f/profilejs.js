@@ -46,3 +46,7 @@ function hideLoad() {
         loader.addClass('hidden');
     }
 }
+// function trocarBG(imageUrl) {
+//     console.log($(this))
+//     $(this).css('background-image', 'url( "../images/svg-icons/' + imageUrl + '")');
+// }

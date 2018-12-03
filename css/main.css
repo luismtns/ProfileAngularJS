@@ -417,6 +417,23 @@ a:active {
   background-image: none !important;
   color: #F4F4F4 !important;
 }
+select.form-control {
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: url(../images/png/arrow.png) no-repeat right transparent;
+  -webkit-appearance: none;
+  background-position-x: 97%;
+}
+select.form-control option {
+  margin: 40px;
+  background: #2d3052;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+select.form-control option[selected="selected"] {
+  background: #8388c3;
+}
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #8388C3 !important;
@@ -924,7 +941,15 @@ nav .d-link.active .menu_icon {
   background: transparent url('../images/gradient-bg-perfil.svg') no-repeat top center;
   min-height: 75px;
   background-size: 100% auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+.header-perfil #imgShape {
+  min-width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background: #242642 url('../images/svg-icons/perfil_padrao.svg') center center no-repeat;
+  background-size: cover;
+  background-size: 100% auto;
 }
 .header-perfil #nomeUsuario {
   display: inline-block;
@@ -992,6 +1017,14 @@ nav .d-link.active .menu_icon {
 }
 .body-perfil .social-icons a i.fa-discord {
   color: #7289DA;
+}
+.body-perfil #imgTimeShape {
+  min-width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background: #242642 url('../images/jpg/demo_video.jpg') center center no-repeat;
+  background-size: cover;
+  background-size: auto 100%;
 }
 #tabs-container .tabs-nav {
   text-align: center;

@@ -318,7 +318,7 @@
         }
         if(isset($_POST['txPosicaoTime'])){
             $PosicaoTime = $_POST['txPosicaoTime'];
-            $sql_code = "UPDATE usuario SET REGIAO_TIME = '$PosicaoTime' WHERE EMAIL = '$emailDe'";
+            $sql_code = "UPDATE usuario SET POSICAO_TIME = '$PosicaoTime' WHERE EMAIL = '$emailDe'";
 
             if (mysqli_query($conect, $sql_code)){
                 $res[] = true;
@@ -327,9 +327,20 @@
                 $validation_error = implode(", ", $error);
             }
         }
+        if(isset($_POST['txIdiomaTime'])){
+            $IdiomaTime = $_POST['txIdiomaTime'];
+            $sql_code = "UPDATE usuario SET IDIOMA_TIME = '$IdiomaTime' WHERE EMAIL = '$emailDe'";
+
+            if (mysqli_query($conect, $sql_code)){
+                $res[] = true;
+            } else {
+                $error[] =  'Players time falhou.';
+                $validation_error = implode(", ", $error);
+            }
+        }
         if(isset($_POST['txPlayersTime'])){
             $PlayersTime = $_POST['txPlayersTime'];
-            $sql_code = "UPDATE usuario SET REGIAO_TIME = '$PlayersTime' WHERE EMAIL = '$emailDe'";
+            $sql_code = "UPDATE usuario SET PLAYERS_TIME = '$PlayersTime' WHERE EMAIL = '$emailDe'";
 
             if (mysqli_query($conect, $sql_code)){
                 $res[] = true;

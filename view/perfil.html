@@ -10,14 +10,16 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-4">
-                <img src="images/svg-icons/perfil_padrao.svg" alt="">
+                <div id="imgShape">
+                    
+                </div>
                 <button id="btn-editar">
                     <i ng-click="editarPerfil()" class="far fa-edit"></i>
                 </button>
             </div>
-            <div class="col-xs-8">
-                   <h4 id="nomeUsuario">Nome Lorem Ipsum</h4>
-                   <p class="sobreUsuario"><span id="txIdade">20 anos</span> <span id="txPais">BR - SP</span></p>
+            <div class="col-xs-8 no-padding-left">
+                   <h4 id="nomeUsuario">-</h4>
+                   <p class="sobreUsuario"><span id="txIdade">--</span> <span id="txPais">--</span></p>
             </div>
         </div>
     </div>
@@ -81,16 +83,16 @@
                 </div>
             </div>
             <div class="social-icons">
-                <a id="linkTwitch" href="">
+                <a id="linkTwitch" target="_blank" href="">
                         <i class="fab fa-twitch"></i>
                 </a>
-                <a id="linkTwitter" href="">
+                <a id="linkTwitter" target="_blank" href="">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a id="linkYoutube" href="">
+                <a id="linkYoutube" target="_blank" href="">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a id="linkDiscord" href="">
+                <a id="linkDiscord" target="_blank" href="">
                     <i class="fab fa-discord"></i>
                 </a>
             </div>
@@ -145,22 +147,22 @@
         <div data-aos="fade-left"
         data-aos-easing="ease-in"
         data-aos-duration="300" class="col-xs-8 lol-infos">
-            <h2 id="nickLol">NickPlayer</h2>
-            <h3 id="ligaLol">Bronze V</h3>
+            <h2 id="txNickLol">-</h2>
+            <h3 id="txLigaLol">-</h3>
             <div class="row kdalp">
                 <div class="col-xs-6 left">
-                    <p>0.60 KDA</p>
+                    <p><span id="txKDA">0.60</span> KDA</p>
                 </div>
                 <div class="col-xs-6 right">
-                    <p>420 LP</p>
+                    <p><span id="txLP">420</span> LP</p>
                 </div>
             </div>
             <div class="row winLoses">
                 <div class="col-xs-6 left">
-                    <p class="v">134 V</p>
+                    <p class="v"><span id="txVitorias">134</span> V</p>
                 </div>
                 <div class="col-xs-6 right">
-                    <p class="d">643 D</p>
+                    <p class="d"><span id="txDerrotas">643</span> D</p>
                 </div>
             </div>
         </div>
@@ -176,14 +178,14 @@
         data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_taxavitoria.svg" alt="">
             <p>Taxa de Vitória</p>
-            <h2>43%</h2>
+            <h2 id="txTaxaVitoria">43%</h2>
         </div>
         <div data-aos="fade-left"
         data-aos-easing="ease-in"
         data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_partidasjogadas.svg" alt="">
             <p>Partidas Jogadas</p>
-            <h2>654</h2>
+            <h2 id="txPartidasJogadas">654</h2>
         </div>
     </div>
     <div class="row margin-top-20">
@@ -192,14 +194,14 @@
         data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_ama.svg" alt="">
             <p>A.M.A</p>
-            <h5>1322 / 4503 / 6023</h5>
+            <h5 id="txAMA">1322 / 4503 / 6023</h5>
         </div>
         <div data-aos="fade-left"
         data-aos-easing="ease-in"
         data-aos-duration="300" class="col-xs-6 center stats-box">
             <img src="images/svg-icons/icon_taxaama.svg" alt="">
             <p>Taxa A.M.A</p>
-            <h2>1.65</h2>
+            <h2 id="txTaxaAMA">1.65</h2>
         </div>
     </div>
     <div class="row margin-top-40">
@@ -249,24 +251,26 @@
             <div class="row">
                 <div data-aos="fade-right"
                 data-aos-easing="ease-in"
-                data-aos-duration="300" class="col-xs-3 no-padding">
-                    <img src="images/png/time_ex.png" alt="imgTime">
+                data-aos-duration="300" class="col-xs-3 no-padding-right">
+                    <div id="imgTimeShape">
+                        
+                    </div>
                 </div>
                 <div data-aos="fade-left"
                 data-aos-easing="ease-in"
                 data-aos-duration="300" class="col-xs-9">
-                    <h5>SKT1 telecom</h5>
+                    <h5 id="txNomeTime">SKT1 telecom</h5>
                     <div class="col-xs-6 no-padding left">
-                        <p>Região: <span id="txRegiãoTime">Brasil</span></p>
+                        <p>Região: <span id="txRegiãoTime">-</span></p>
                     </div>
                     <div class="col-xs-6 no-padding right">
-                        <p>Posição: <img id="txPosicaoTime" src="images/svg-icons/mid_lane.svg" alt=""></p>
+                        <p>Posição: <img id="txPosicaoTime" src="" alt=""></p>
                     </div>
                     <div class="col-xs-6 no-padding left">
-                        <p>Idioma: <span id="txIdiomaTime">PT-BR</span></p>
+                        <p>Idioma: <span id="txIdiomaTime">-</span></p>
                     </div>
                     <div class="col-xs-6 no-padding right">
-                        <p>Players: <span id="txPlayersTime">3 de 5</span></p>
+                        <p>Players: <span id="txPlayersTime">-</span></p>
                     </div>
                 </div>
             </div>

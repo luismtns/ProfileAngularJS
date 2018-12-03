@@ -65,13 +65,13 @@
             <div class="col-xs-6">
                 <label for="txIdioma1">Idioma 1</label>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="txIdioma1" placeholder="Ex: PT-BR" maxlength="10" autocomplete="off">
+                    <input type="text" class="form-control" id="txIdioma1" placeholder="Ex: PT-BR"  style="text-transform: uppercase;" autocomplete="off">
                 </div>
             </div>
             <div class="col-xs-6">
                 <label for="txIdioma2">Idioma 2</label>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="txIdioma2" placeholder="Ex: EN-US" maxlength="10" autocomplete="off">
+                    <input type="text" class="form-control" id="txIdioma2" placeholder="Ex: EN-US" style="text-transform: uppercase;" autocomplete="off">
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
             </div>
         </div>
         <div class="col-xs-10">             
-            <input type="text" class="form-control" id="txTwitter" placeholder="Ex.: @profile" maxlength="30" autocomplete="off">
+            <input type="text" class="form-control" id="txTwitter" placeholder="Ex.: profile (SEM @)" maxlength="30" autocomplete="off">
         </div>
     </div>
     <div class="row form-group">
@@ -206,7 +206,7 @@
             </div>
         </div>
         <div class="col-xs-10">             
-            <input type="text" class="form-control" id="txDiscord" placeholder="Ex.: user#1234" maxlength="30" autocomplete="off">
+            <input type="text" class="form-control" id="txDiscord" placeholder="Ex.: https://discord.gg/4P2Sfb" maxlength="30" autocomplete="off">
         </div>
     </div>
 </div>
@@ -297,13 +297,20 @@
         <div class="col-xs-6">
             <label for="txRegiaoTime">Região</label>
             <div class="form-group">
-                <input type="text" class="form-control" id="txRegiaoTime" placeholder="Região do Time" maxlength="30" autocomplete="off">
+                <input type="text" class="form-control" id="txRegiaoTime" placeholder="Região do Time" style="text-transform: uppercase;" maxlength="30" autocomplete="off">
             </div>
         </div>
         <div class="col-xs-6">
             <label for="txPosicaoTime">Sua posição</label>
             <div class="form-group">
-                <input type="text" class="form-control" id="txPosicaoTime" placeholder="Ex.: Mid" maxlength="30" autocomplete="off">
+                <select id="txPosicaoTime" class="form-control">
+                    <option value="">Selecione a Lane</option>
+                    <option value="top">Top Laner</option>
+                    <option value="jungle">Jungler</option>
+                    <option value="mid">Mid Laner</option>
+                    <option value="bot">ADCarry</option>
+                    <option value="sup">Support</option>
+                </select>
             </div>
         </div>
     </div>
@@ -311,13 +318,13 @@
         <div class="col-xs-6">
             <label for="txIdiomaTime">Idioma</label>
             <div class="form-group">
-                <input type="text" class="form-control" id="txIdiomaTime" placeholder="Idioma Principal" maxlength="30" autocomplete="off">
+                <input type="text" class="form-control" id="txIdiomaTime" placeholder="Idioma Principal" style="text-transform: uppercase;" maxlength="30" autocomplete="off">
             </div>
         </div>
         <div class="col-xs-6">
             <label for="txPlayersTime">Numero de Players</label>
             <div class="form-group">
-                <input type="number" class="form-control" id="txPlayersTime" placeholder="De 1 a 5" min="1" max="5" >
+                <input type="text"  class="form-control" id="txPlayersTime" placeholder="De 1 a 5" autocomplete="off">
             </div>
         </div>
     </div>
