@@ -106,10 +106,10 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
             if(data['NOME'] != ""){
                 $('#nomeUsuario').append(data['NOME']);
             }
-            if(data['NICK']){                
+            if(data['NICK']){              
                 $('#nomeUsuario').append(' "' + data['NICK'] + '" ');
             }
-            if(data['SOBRENOME']){                
+            if(data['SOBRENOME']){              
                 $('#nomeUsuario').append(data['SOBRENOME']);
             }
             $('#txIdade').text(data['IDADE'] + " anos");
