@@ -15,4 +15,12 @@ ngapp.controller("reviewsCTRL", function ($scope, $route) {
         slidesToScroll: 1,
         arrows: false
       });
+
+      $scope.abrirReview = function () {
+          $('#Reviews1').removeClass('hidden');
+      }
+
+      $scope.fecharReview = function () {
+          $('#Reviews1').addClass('hidden');
+      }
 });

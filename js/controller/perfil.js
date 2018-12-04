@@ -15,7 +15,7 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
             window.location.href = '#/perfil/editar'
         }
     }
-    
+
     function logout() {
         
         userID = null;            
@@ -26,36 +26,6 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
 
     $('#btnSair').click(function () {
         logout();
-    });
-
-    var valPosicao1 = 73;
-
-    var graphP1 = new ProgressBar.Circle('#graphPosicao1', {
-        color: '#39d3f7',
-        strokeWidth: 8,
-        trailWidth: 4,
-        trailColor: '#242642',
-        text: {
-            value: '<img src="images/svg-icons/mid_lane.svg" alt=""><br>' + valPosicao1 + '%'
-        }
-    });
-    graphP1.animate(valPosicao1 / 100.0, {
-        duration: 1000
-    });
-
-    var valPosicao2 = 30;
-
-    var graphP2 = new ProgressBar.Circle('#graphPosicao2', {
-        color: '#ee61f2',
-        strokeWidth: 8,
-        trailWidth: 4,
-        trailColor: '#242642',
-        text: {
-            value: '<img src="images/svg-icons/sup_lane.svg" alt=""><br>' + valPosicao2 + '%'
-        }
-    });
-    graphP2.animate(valPosicao2 / 100.0, {
-        duration: 1000
     });
 
     $('.videos-carousel').slick({
@@ -178,6 +148,188 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
             if(data['PLAYERS_TIME'] != ""){
                 $('#txPlayersTime').text(data['PLAYERS_TIME'] + ' de 5');
             }
+
+            // LOLZINHO
+            
+            if(data['USER_LOL'] != ""){
+                $('#txNickLol').text(data['USER_LOL']);
+                var userLOL = data['USER_LOL'] ; 
+                showLoad();
+                $.ajax({
+                    // "async": true,      
+                    "url":  "php/getSummonerElo.php",
+                    "method": "POST", 
+                    "data":{
+                        'SummonerName': encodeURIComponent(data['USER_LOL'])
+                    }
+                })
+                .done(function(data){
+                    data = JSON.parse(data);
+                    rankJson = data;
+                    console.log(data);
+                    if(data['error']){
+                        aviso('Não foi possível encontrar seus dados da sua conta do League of Legends.<br><br>User atual: <strong>' + userLOL + '</strong>', 'Algo esta errado!')
+                    }else{
+                        var index;
+                        if(rankJson[0]["queueType"] == "RANKED_SOLO_5x5"){
+                            index = 0;
+                        }else{
+                            index = 1;
+                        }
+                        
+                        $('#txLigaLol').text(rankJson[index]['tier'] + rankJson[index]['rank']);
+                        $('#txLP').text(rankJson[index]['leaguePoints']);
+                        $('#txVitorias').text(rankJson[index]['wins']);
+                        $('#txDerrotas').text(rankJson[index]['losses']);
+
+                        // Taxa Vitorias
+                        var totalJogos = rankJson[index]['wins'] + rankJson[index]['losses'];
+                        $('#txPartidasJogadas').text(totalJogos);
+
+                        var vitorias = rankJson[index]['wins'];
+                        var taxaVitorias = Math.round((vitorias * 100) / totalJogos);
+                        $('#txTaxaVitoria').text( taxaVitorias+'%');
+
+                        // GET MATCHES
+                        showLoad();
+                        $.ajax({
+                            // "async": true,      
+                            "url":  "php/getMatches.php",
+                            "method": "POST", 
+                            "data":{
+                                'SummonerName': encodeURIComponent(data['USER_LOL'])
+                            }
+                        })
+                        .done(function(data){
+                            data = JSON.parse(data);
+                            if(data['error']){
+                                aviso('Não foi possível encontrar seus dados da sua conta do League of Legends.<br><br>User atual: <strong>' + userLOL + '</strong>', 'Algo esta errado!')
+                            }else{
+                                data = data['matches'];
+                                console.log(data);
+                                var mid = 0;
+                                var top = 0;
+                                var jungle = 0;
+                                var adc = 0;
+                                var suport = 0;
+                                for (let i = 0; i < data.length; i++) {
+                                    var lane = data[i]['lane'];
+                                    var role = data[i]['role'];
+                                    if(lane == 'MID'){
+                                        mid ++;
+                                    }
+                                    if(lane == 'TOP'){
+                                        top ++;
+                                    }
+                                    if(lane == 'JUNGLE'){
+                                        jungle ++;
+                                    }
+                                    if(lane == 'BOTTOM'){
+                                        if(role == 'DUO_SUPPORT'){
+                                            suport ++;
+                                        }
+                                        if(role == 'DUO_CARRY'){
+                                            adc ++;
+                                        }
+                                        if(role == 'DUO'){
+                                            suport ++;
+                                        }
+                                    }
+                                    if(lane == 'NONE'){
+                                        if(role == 'DUO_SUPPORT'){
+                                            suport ++;
+                                        }
+                                        if(role == 'DUO_CARRY'){
+                                            adc ++;
+                                        }
+                                    }                                    
+                                }
+                                var totalPartidas = mid+top+jungle+adc+suport;
+
+                                var arrayJogosLenght = [top, jungle, mid, adc, suport];
+                                arrayJogosLenght.sort(function(a, b){return b-a});
+                                
+                                var maisJogado = arrayJogosLenght[0];
+                                var segundoMaisJogado = arrayJogosLenght[1];
+                                
+                                var imgLane1 = '';
+                                if(maisJogado == top){
+                                    imgLane1 = 'top';
+                                }else if(maisJogado == jungle){
+                                    imgLane1 = 'jungle';               
+                                }else if(maisJogado == mid){
+                                    imgLane1 = 'id';                                    
+                                }else if(maisJogado == adc){
+                                    imgLane1 = 'bot';                                    
+                                }else if(maisJogado == suport){
+                                    imgLane1 = 'sup';
+                                    
+                                }
+                                porcentagemMaisJogado = Math.round((100 * maisJogado) / totalPartidas);
+                                
+                                var valPosicao1 = porcentagemMaisJogado;
+
+                                var graphP1 = new ProgressBar.Circle('#graphPosicao1', {
+                                    color: '#39d3f7',
+                                    strokeWidth: 8,
+                                    trailWidth: 4,
+                                    trailColor: '#242642',
+                                    text: {
+                                        value: '<img src="images/svg-icons/'+imgLane1+'_lane.svg" alt=""><br>' + valPosicao1 + '%'
+                                    }
+                                });
+                                graphP1.animate(valPosicao1 / 100.0, {
+                                    duration: 1000
+                                });
+                                
+                                
+                                var imgLane2 = '';
+                                if(segundoMaisJogado == top){
+                                    imgLane2 = 'top';
+                                }else if(segundoMaisJogado == jungle){
+                                    imgLane2 = 'jungle';               
+                                }else if(segundoMaisJogado == mid){
+                                    imgLane2 = 'id';                                    
+                                }else if(segundoMaisJogado == adc){
+                                    imgLane2 = 'bot';                                    
+                                }else if(segundoMaisJogado == suport){
+                                    imgLane2 = 'sup';
+                                    
+                                }
+                                porcentagemsegundoMaisJogado = Math.round((100 * segundoMaisJogado) / totalPartidas);
+                                var valPosicao2 = porcentagemsegundoMaisJogado;
+
+                                var graphP2 = new ProgressBar.Circle('#graphPosicao2', {
+                                    color: '#ee61f2',
+                                    strokeWidth: 8,
+                                    trailWidth: 4,
+                                    trailColor: '#242642',
+                                    text: {
+                                        value: '<img src="images/svg-icons/sup_lane.svg" alt=""><br>' + valPosicao2 + '%'
+                                    }
+                                });
+                                graphP2.animate(valPosicao2 / 100.0, {
+                                    duration: 1000
+                                });
+                                console.log(location);
+                                
+                            }
+                            hideLoad();
+                        })
+                        .fail(function(jqXHR, textStatus){
+                            console.log(textStatus);
+                            hideLoad();
+                        });
+
+                        
+                    }
+                    hideLoad();
+                })
+                .fail(function(jqXHR, textStatus){
+                    console.log(textStatus);
+                    hideLoad();
+                });
+            };
 
 
             hideLoad();            

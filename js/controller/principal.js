@@ -54,21 +54,35 @@ ngapp.controller("principalCTRL", function ($scope, $route) {
     }
     verificarLogin();
 
-    $('.carrousel-home').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    });
-
-    $('.carrousel-webserie').slick({
-        infinite: false,
-        slidesToShow: 2.5,
-        slidesToScroll: 1,
-        arrows: false
-    });
+    $scope.acessarNoticias = function () {
+        window.location.href = "#/explorar/reviews"
+    }
+    
+    $scope.acessarReviews = function () {
+        window.location.href = "#/explorar/reviews"
+    }
+    
+    $scope.Interagir = function () {
+        window.location.href = "#/explorar/reviews"
+    }
+    setTimeout(()=>{
+        $('.carrousel-home').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+    
+        $('.carrousel-webserie').slick({
+            infinite: false,
+            slidesToShow: 2.5,
+            slidesToScroll: 1,
+            arrows: false
+        });
+        AOS.refresh();
+    })
     
 });

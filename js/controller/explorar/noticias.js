@@ -10,4 +10,12 @@ ngapp.controller("noticiasCTRL", function ($scope, $route) {
         window.location.href = "#/explorar"
     }
 
+    $scope.abrirNoticia = function () {
+        $('#Noticia1').removeClass('hidden');
+    }
+
+    $scope.fecharNoticia = function () {
+        $('#Noticia1').addClass('hidden');
+    }
+
 });

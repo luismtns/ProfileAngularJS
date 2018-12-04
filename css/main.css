@@ -756,6 +756,42 @@ select:-webkit-autofill {
 #modalProfile .m_content #f_m button {
   margin-top: 20px;
 }
+.overlay-noticia {
+  z-index: 99999999999999999999;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+.overlay-noticia .m_content {
+  width: 100%;
+  max-width: 90%;
+  min-height: 1px;
+  max-height: 88%;
+  position: relative;
+  top: 40px;
+  right: auto;
+  left: auto;
+  margin: 0 auto;
+  background-color: #2d3052;
+  padding: 15px;
+  border-radius: 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.overlay-noticia .m_content h3 {
+  font-weight: bold;
+  color: #00de81;
+}
+.overlay-noticia .m_content h5 {
+  color: #8388C3;
+}
 nav {
   z-index: 999999;
   background-color: #4E29A6;
@@ -861,6 +897,36 @@ nav .d-link.active .menu_icon {
 }
 .body-home .carrousel-home .slick-dots li.slick-active button {
   background-color: #8388C3;
+}
+.body-home .carrousel-home .noticias {
+  text-align: center;
+  padding: 20px;
+}
+.body-home .carrousel-home .noticias h2 span {
+  color: #00de81;
+}
+.body-home .carrousel-home .reviews {
+  text-align: center;
+  padding: 20px;
+}
+.body-home .carrousel-home .reviews h2 {
+  color: #ee61f2;
+}
+.body-home .carrousel-home .interacoes {
+  text-align: center;
+  padding: 20px;
+}
+.body-home .carrousel-home .interacoes h2 {
+  color: #39d3f7;
+}
+.body-home .carrousel-home .interacoes .btn-verde {
+  color: #39d3f7;
+  border-color: #39d3f7;
+}
+.body-home .carrousel-home .interacoes .btn-verde:hover,
+.body-home .carrousel-home .interacoes .btn-verde:active {
+  background-color: #39d3f7;
+  color: #2d3052;
 }
 .body-home h3 span {
   color: #ee61f2;
@@ -1410,8 +1476,16 @@ nav .d-link.active .menu_icon {
 .header-videos #menu-video #haha-rate i {
   font-size: 24px;
 }
+.header-videos #menu-video #haha-rate:hover,
+.header-videos #menu-video #haha-rate:active {
+  color: #F9CE35;
+}
 .header-videos #menu-video #fire-rate i {
   font-size: 24px;
+}
+.header-videos #menu-video #fire-rate:hover,
+.header-videos #menu-video #fire-rate:active {
+  color: #FF6D1B;
 }
 .header-videos #menu-video #minimize-video i {
   font-size: 24px;
@@ -1721,6 +1795,14 @@ nav .d-link.active .menu_icon {
   height: 150px;
   background: #8388C3;
   margin-bottom: 30px;
+  background: #242642 url('../images/jpg/demo_video.jpg') center center no-repeat;
+  background-size: cover;
+}
+.body-noticias .noticia_container.estadao {
+  background-image: url('../images/jpg/noticias_estadao.jpg');
+}
+.body-noticias .noticia_container.techtudo {
+  background-image: url('../images/jpg/noticias_hyperx.jpg');
 }
 .body-noticias .noticia_container .box_noticia {
   display: block;

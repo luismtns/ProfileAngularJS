@@ -13,30 +13,34 @@
 <div class="body-noticias">
     <div data-aos="fade-up"
     data-aos-easing="ease-in"
-    data-aos-duration="500" class="noticia_container">
+    data-aos-duration="500" ng-click="abrirNoticia()" class="noticia_container estadao">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box_noticia">
-                        <span>League of Legends</span>
-                        <h4>Lorem Titulo Lorem Titulo Lorem Titulo Lorem</h4>
+                        <span>League of Legends & Counter Strike</span>
+                        <h4>Projeto de lei quer oficializar esportes eletrônicos no Brasil</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div data-aos="fade-up"
-    data-aos-easing="ease-in"
-    data-aos-duration="500" class="noticia_container">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="box_noticia">
-                        <span>League of Legends</span>
-                        <h4>Lorem Titulo Lorem Titulo Lorem Titulo Lorem</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+<div id="Noticia1" class="overlay-noticia hidden">
+    <div class="m_content">
+        <h3 id="titulo_n">Projeto de lei quer oficializar esportes eletrônicos no Brasil</h3>
+        <h5>Proposta da deputada Mariana Carvalho (PSDB-RO) busca dar a jogadores League of Legends e Counter-Strike o mesmo status dado a atletas tradicionais</h5>
+        <hr>
+        <p>A deputada federal Mariana Carvalho (PSDB-RO) apresentou nesta terça-feira, 30, um projeto de lei que pretende conferir aos esportes eletrônicos (eSports) o mesmo status legal dado aos esportes tradicionais.</p>
+        <p>No texto, que recebeu o número de PL 7747/2017, ainda sem previsão de votação, Mariana pede uma modificação na Lei 9.615/1998, que versa sobre as normas gerais de esporte no Brasil, acrescentando a ela o desporto virtual, "entendido como jogos eletrônicos transcorridos individual ou coletivamente, contra a máquina ou em rede, bem como a competição entre profissionais e amadores do gênero".</p>
+
+        <p>Segundo a deputada, uma das justificativas do projeto é dar amparo legal aos profissionais dos esportes eletrônicos, determinando diretrizes contratuais e dando a eles maior segurança. "A política também visa coibir precarização de torneios e condição de trabalhos para os jogadores", diz o texto da proposta, que não tem previsão de ser levada às comissões da Câmara.</p>
+
+        <p>No entanto, o texto apresentado por Mariana Carvalho comete um deslize, ao afirmar que as Olimpíadas de 2022 (sic) terão "a modalidade de esporte virtual elencada junto às demais", e por isso o Brasil deve dar incentivo ao "novo e grande esporte".</p>
+
+        <p>Na verdade, os eSports farão parte das competições oficiais dos Jogos Asiáticos de 2022 – em 2018, os esportes eletrônicos farão parte do evento como modalidade teste. No que diz respeito aos Jogos Olímpicos de Verão, o COI não tem, ao menos por enquanto, intenção de incluir games como League of Legends, StarCraft II ou Counter-Strike: Global Offensive como modalidades oficiais das Olimpíadas. </p>
+        <small>Fonte: Matéria por Bruno Capelas - O Estado de S. Paulo - 31/05/2017 | 05h00</small>
+        <button ng-click="fecharNoticia()" class="btn-rosa margin-top-20">Fechar</button>
+    </div>      
+
 </div>
