@@ -15,9 +15,7 @@ ngapp.controller("perfilCTRL", function ($scope, $route) {
             window.location.href = '#/perfil/editar'
         }
     }
-
-    $scope.nome = userName; 
-
+    
     function logout() {
         
         userID = null;            
