@@ -19,23 +19,23 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
 
         // console.log(reEmail.test(txEmail));
         if(txLogin.length < 3){
-            alert("Verifique o campo do Login.");
+            aviso("Verifique o campo do Login.");
             return
         }
         else if(txEmail < 4){
-            alert("Verifique o campo do E-mail.");
+            aviso("Verifique o campo do E-mail.");
             return
         }
         else if(!reEmail.test(txEmail)){
-            alert("E-mail inválido!");
+            aviso("E-mail inválido!");
             return
         }
         else if(txSenha.length < 8){
-            alert("Verifique o campo da Senha.\nSua senha deve conter pelo menos 8 caracteres sendo uma letra maiuscula, uma minuscula e um numero.");
+            aviso("Verifique o campo da Senha.\nSua senha deve conter pelo menos 8 caracteres sendo uma letra maiuscula, uma minuscula e um numero.");
             return
         }
         else if(!reSenha.test(txSenha)){
-            alert("Senha inválida!\nSua senha deve conter pelo menos 8 caracteres sendo uma letra maiuscula, uma minuscula e um numero.");
+            aviso("Senha inválida!\nSua senha deve conter pelo menos 8 caracteres sendo uma letra maiuscula, uma minuscula e um numero.");
             return
         }
         else{
@@ -100,7 +100,8 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
                 'senha': txSenha
             }
         })
-        .done(function(data){         
+        .done(function(data){  
+            hideLoad();       
                 if(data.error != ''){
                     aviso(data['error'], 'OPS!')
                     console.log(data);
@@ -109,7 +110,6 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
                     console.log(data['user']);
                     window.location.href='#/perfil';
                 }
-            hideLoad();
         })
         .fail(function(jqXHR, textStatus){
             console.log(jqXHR);
