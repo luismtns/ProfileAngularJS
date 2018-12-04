@@ -1,7 +1,8 @@
 ngapp.controller("laddingCTRL", function ($scope, $route) {
     
     $('#btnSaibaMais').click(function () {
-        $(".body-ladding").animate({scrollTop: $('#tgtImg').offset().top}, "slow");
+        console.log($('#tgtImg').offset().top);
+        $("html").animate({scrollTop: $('#tgtImg').offset().top}, "slow");
     });
 
     function marcarVisitante(){
@@ -17,6 +18,6 @@ ngapp.controller("laddingCTRL", function ($scope, $route) {
         window.location.href = '#/login';
         setTimeout(()=>{
             $('#btnRegistrarTela').click();
-        }, 50)
+        }, 300)
     }
 });

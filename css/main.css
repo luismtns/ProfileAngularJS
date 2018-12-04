@@ -751,6 +751,7 @@ select:-webkit-autofill {
 }
 #modalProfile .m_content #h_m {
   text-align: center;
+  font-weight: bold;
 }
 #modalProfile .m_content #f_m button {
   margin-top: 20px;
@@ -1828,9 +1829,7 @@ nav .d-link.active .menu_icon {
   height: 100%;
   z-index: 9999999999999999999;
   background-color: #2d3052;
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 .body-ladding .banner-topo {
   max-width: 100%;
@@ -1839,7 +1838,6 @@ nav .d-link.active .menu_icon {
   background-size: 100% auto;
   min-height: 80vh;
   padding-top: 70%;
-  background-position: 0% -90%;
 }
 .body-ladding .saiba-mais {
   line-height: 1;
@@ -1850,9 +1848,7 @@ nav .d-link.active .menu_icon {
 }
 .body-ladding .c-infografico {
   max-width: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 .body-ladding .c-infografico p {
   font-size: 18px;
