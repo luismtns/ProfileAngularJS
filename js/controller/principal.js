@@ -2,7 +2,6 @@
 
 var jsonUsuario;
 var userLogado = false;
-var userName = '';
 
 function showLoad() {
     $('.overlay').removeClass('hidden');

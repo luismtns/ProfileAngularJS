@@ -10,7 +10,6 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
 
     
     $scope.btnRegistrar = function () {
-        showLoad();
         var txLogin = $('#txLoginC').val();
         var txEmail = $('#txEmailC').val();
         var txSenha = $('#txSenhaC').val(); 
@@ -47,7 +46,6 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
     }
     
     $scope.btnLogar = function () {
-        showLoad();
         var txLogin = $('#txLogin').val();
         var txSenha = $('#txSenha').val(); 
         userName = txLogin;
@@ -59,6 +57,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
     
     function registrarUsuario(txLogin, txEmail, txSenha){
         
+        showLoad();
         $.ajax({
             // "async": true,      
             "url":  "php/include.php",
@@ -90,6 +89,7 @@ ngapp.controller("loginCTRL", function ($scope, $http, $route, $rootScope) {
     };
 
     function logarUsuario(txLogin, txSenha) {
+        showLoad();
         
         $.ajax({
             "url":  "php/autentica.php",
