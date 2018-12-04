@@ -1775,6 +1775,36 @@ nav .d-link.active .menu_icon {
   padding: 0;
   z-index: 10;
 }
+.body-participe .social-icons {
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 1;
+  text-align: center;
+  margin-top: 20px;
+}
+.body-participe .social-icons a {
+  margin-left: 5px;
+  color: initial;
+}
+.body-participe .social-icons a:first-child {
+  margin-left: 0;
+}
+.body-participe .social-icons a:hover {
+  color: initial;
+}
+.body-participe .social-icons a i.fa-twitter {
+  color: #08A0E9;
+}
+.body-participe .social-icons a i.fa-spotify {
+  color: #1DB954;
+}
+.body-participe .social-icons a i.fa-youtube {
+  color: #E62117;
+}
+.body-participe .social-icons a i.fa-discord {
+  color: #7289DA;
+}
 .header-noticias {
   display: block;
   width: 100%;

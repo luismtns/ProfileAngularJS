@@ -55,7 +55,7 @@ ngapp.controller("principalCTRL", function ($scope, $route) {
     verificarLogin();
 
     $scope.acessarNoticias = function () {
-        window.location.href = "#/explorar/reviews"
+        window.location.href = "#/explorar/noticias"
     }
     
     $scope.acessarReviews = function () {
@@ -63,7 +63,7 @@ ngapp.controller("principalCTRL", function ($scope, $route) {
     }
     
     $scope.Interagir = function () {
-        window.location.href = "#/explorar/reviews"
+        window.location.href = "#/explorar/participe"
     }
     setTimeout(()=>{
         $('.carrousel-home').slick({
